@@ -1,0 +1,133 @@
+<title>Booking form for {!! $room->title !!}</title>
+@extends('front_end.layouts.main_front_layout3')
+@section('content')
+
+    <div class="pagetop">
+        <div class="container">
+            <h1>Booking Form</h1>
+            <ul>
+                <li><a title="" href="%7b%21%21%20URL__to(%27/%27%2c%27%27%2cis_secured())%20%21%21%7d.html">Home</a></li>
+                <li><a title="" href="%7b%21%21%20URL__to(%27/rooms%27%2c%27%27%2cis_secured())%20%21%21%7d.html">Packages</a></li>
+                <li>Booking Form</li>
+            </ul>
+        </div>
+    </div><!-- Page Top -->
+
+    <section>
+        <div class="block gray">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12 column">
+                        @if(Session::has('message'))
+                            <h2 class="alert alert-success text-center">{!! Session::get('message') !!}</h2>
+                        @endif
+                        <div class="booking-form">
+                            <div class="booking-detail">
+                                
+                                <div class="booking-image"><img src="%7b%21%21%20URL__asset(%27resources/uploads/%27.html" alt="" style="width:380px;" /></div>
+                                <div class="booking-name">
+                                    <span>{!! $room->room_type_id !!}</span>
+                                    <h5>{!! $room->title !!}</h5>
+                                </div>
+                                <div class="package-price">
+                                    <strong>Start From</strong>
+                                    <i>{!! $room->price !!}</i>
+                                    <span>Per Person</span>
+                                </div><!-- Package price -->
+                                <div class="see-details">
+                                    <a class="book-now" href="%7b%21%21%20URL__to(%27booking_details%27%2c%24room-_id%2cis_secured())%20%21%21%7d.html" title="">SEE DETAILS</a>
+                                </div>
+                            </div><!-- Booking Detail -->
+
+                            <div class="indivisual-forms">
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <div class="per-person-form">
+                                            <div class="center-heading">
+                                                <h3>Guest Information</h3>
+                                                <span>Book Rooms For Your Stay</span>
+                                            </div>
+                                            {!! Form::open(['url'=>URL::to('booking_form','',is_secured()),'onsubmit'=>'return checkAgree()','name'=>'myForm' ,'class'=>'form']) !!}
+                                                {!! Form::hidden('room_id',$room->id) !!}
+                                                <div class="row">
+                                                    <div class="col-md-12 clearfix">
+                                                        <div class="field"><input type="text" placeholder="Your Full Name" name="name" required /></div>
+                                                    </div>
+                                                    <div class="col-md-6">
+                                                        <div class="field"><input type="text" placeholder="Company Name(Optional)" name="companyName" /></div>
+                                                    </div>
+                                                    <div class="col-md-6">
+                                                        <div class="field"><input type="text" placeholder="Position(Optional)" name="positon"  /></div>
+                                                    </div>
+                                                    <div class="col-md-6">
+                                                        <div class="field"><input type="text" placeholder="Nationality" name="nationality" required /></div>
+                                                    </div>
+                                                    <div class="col-md-6">
+                                                        <div class="field"><input type="text" placeholder="National ID Card Number" name="nationalIdCardNumber" required /></div>
+                                                    </div>
+                                                    <div class="col-md-6">
+                                                        <div class="field"><input type="text" placeholder="Mobile Number" name="mobile" onkeyup="mobileValidation();" required /></div>
+                                                    </div>
+                                                    <div class="col-md-6">
+                                                        <div class="field"><input type="email" placeholder="Email" name="email" required /></div>
+                                                    </div>
+                                                    <div class="col-md-6">
+                                                        <div class="field">
+                                                            <input class="popupDatepicker" type="text" placeholder="CheckOut" name="check_in" required>
+                                                            <img class="field-icon" src="%7b%21%21%20URL__asset(%27resources/assets/front/images/calendar.html" alt="" />
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-6">
+                                                        <div class="field">
+                                                            <input class="popupDatepicker" type="text" placeholder="CheckIn" name="check_out" required>
+                                                            <img class="field-icon" src="%7b%21%21%20URL__asset(%27resources/assets/front/images/calendar.html" alt="" />
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-12">
+                                                        {!! Form::textarea('note',null,['class'=>'form-control','rows'=>'5','cols'=>'12']) !!}
+                                                    </div>
+                                                    <div class="col-md-12">
+                                                        <b>Terms and Conditions:</b>
+                                                        <p style="border: 1px solid red;padding: 7px;text-align: justify;">
+                                                            Before you can submit you need to agree to the "Terms and Conditions". No charges if cancelled 24 hours before the start date & time. If cancelled less than 24 hours of the start date/time CASPIA will charge for one day for all services/facilities booked.
+                                                        </p>
+                                                    </div>
+                                                   <div class="col-md-12">
+                                                       <label>
+                                                           <input type="checkbox" name="agree" id="agree">
+                                                           Yes, I agree to the Terms and Conditions
+                                                       </label>
+
+                                                   </div>
+                                                    <div class="col-md-6 text-center">
+                                                        {!! Form::submit('BOOK',['class'=>'btn btn-md btn-success']) !!}
+                                                    </div>
+                                                </div>
+                                            {!! Form::close() !!}
+
+                                        </div><!-- Per Person Form -->
+                                    </div>
+                                </div>
+                            </div><!-- Indivisual Forms -->
+                        </div><!-- Booking Form -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+@endsection
+
+@section('on_page_script')
+    <script>
+        function checkAgree(){
+            if($("#agree").is(':checked')){
+                return true;
+            }else{
+                alert('Please agree to the Terms and Conditions!');
+                return false;
+            }
+        }
+    </script>
+@endsection

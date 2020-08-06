@@ -1,0 +1,118 @@
+<title>About Meeting / Event</title>
+@extends('front_end.layouts.main_front_layout')
+@section('content')
+
+
+
+
+    <div class="pagetop">
+        <div class="container">
+            <h1>Meeting & Events</h1>
+            <ul>
+                <li><a title="" href="#">Home</a></li>
+                <li>Meeting & Events</li>
+            </ul>
+        </div>
+    </div><!-- Page Top -->
+
+
+    <section>
+        <div class="block gray-layer">
+            <div class="parallax" data-velocity="-.1" style="background: rgba(0, 0, 0, 0) url({!! URL::asset('resources/assets/front/images/parallax1.html',is_secured()) !!}) no-repeat 50% 0;"></div>
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-6">
+                        <div>  
+                          <p style="color:#555555;font-family:domine;font-size:25px;font-weight:bold;letter-spacing:0.3px;"><i class="glyphicon glyphicon-plus"></i> Conference Hall</p>
+                                <hr style="border-color:black">                  
+                                    <p style="text-align:justify">We can arrange 3 conferences or meetings or trainings venue at a time in Level-2 and Level-3. The Conference Halls, fully furnished and integrated with all the latest gadgets makes it an absolute easy to stage any sort of meetings or seminars. Completely separated from the sounds of outside it's the perfect setting for holding your meetings that could spell success for you.</p>
+                                    
+                          
+                        </div><!-- tabs-data -->
+
+                    </div>
+                    <div class="col-md-6">
+                      <img  class="img-responsive" style="width:400px; height: 300" src="%7b%21%21%20URL__asset(%27resources/assets/front/images/event-6_b.html">
+                    </div>
+                    <div class="col-md-6">&nbsp;</div>
+                    <div class="col-md-6">&nbsp;</div>
+                    <div class="col-md-6">
+                        <div>  
+                          <p style="color:#555555;font-family:domine;font-size:25px;font-weight:bold;letter-spacing:0.3px;"><i class="glyphicon glyphicon-plus"></i> Key Feature Include</p>
+                                <hr style="border-color:black">                  
+                                    <p style="text-align:justify"><i class="glyphicon glyphicon-menu-right"></i> Capacity of 20 to 40 Persons.</p>
+                                    <p style="text-align:justify"><i class="glyphicon glyphicon-menu-right"></i> Multi-media Projector & Screen.</p>
+                                    <p style="text-align:justify"><i class="glyphicon glyphicon-menu-right"></i> Hi-Fi Sound System.</p>
+                                    
+                          
+                        </div><!-- tabs-data -->
+
+                    </div>
+                     <div class="col-md-12">&nbsp;</div>
+
+                    
+                     
+                    <div class="col-md-6">
+                        <div>  
+                          <p style="color:#555555;font-family:domine;font-size:25px;font-weight:bold;letter-spacing:0.3px;"><i class="glyphicon glyphicon-plus"></i> Banquet Hall</p>
+                                <hr style="border-color:black">                  
+                                    <p style="text-align:justify">The Banquet Hall, accommodating 150 guests, Level-3 of the Caspia Building for meeting, seminar, training programs, parties or any sort of family or official get-togethers.</p>
+                                    
+                          
+                                
+                        </div><!-- tabs-data -->
+
+                    </div>
+                    <div class="col-md-6">
+                      <img  class="img-responsive" style="width:400px; height: 300" src="%7b%21%21%20URL__asset(%27resources/assets/front/images/event-3_b.html">
+                    </div>
+                </div>
+            </div><!-- container -->
+        </div><!-- block -->
+    </section><!-- Tabs Section -->
+
+
+@endsection
+
+@section('on_page_script')
+    <script type="text/javascript">
+        $(window).load(function(){
+            /*================== TESTIMONIAL CAROUSEL ======================*/
+            $('.testimonial-carousel').owlCarousel({
+                autoplay:true,
+                autoplayTimeout:3000,
+                smartSpeed:2000,
+                loop:true,
+                dots:false,
+                nav:false,
+                margin:10,
+                singleItem:true,
+                items:1,
+                animateIn:"fadeIn",
+                animateOut:"fadeOut"
+            });
+
+
+
+            /*================== CLIENTS CAROUSEL ======================*/
+            $('.clients-carousel').owlCarousel({
+                autoplay:true,
+                autoplayTimeout:30000,
+                smartSpeed:2000,
+                loop:true,
+                dots:false,
+                nav:true,
+                margin:10,
+                items:5,
+                autoHeight:true,
+                responsive:{
+                    0:{items:1},
+                    600:{items:2},
+                    1000:{items:3},
+                    1200:{items:5}
+                }
+            });
+
+        });
+    </script>
+@endsection

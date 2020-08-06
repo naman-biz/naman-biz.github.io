@@ -1,0 +1,63 @@
+@extends('front_end.layouts.main_front_layout3')
+@section('content')
+
+
+    <div class="pagetop">
+        <div class="container">
+            <h1>Booking Packages</h1>
+            <ul>
+                <li><a title="" href="%7b%21%21%20URL__to(%27/%27%2c%27%27%2cis_secured())%20%21%21%7d.html">Home</a></li>
+                <li>Booking Now</li>
+            </ul>
+        </div>
+    </div><!-- Page Top -->
+
+    <section>
+        <div class="block gray">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12 column">
+                        <div class="row">
+                            <div class="rooms-packages masonary">
+                                @foreach($rooms as $r)
+                                <div class="col-md-4">
+                                    <div class="room-package">
+                                        <div class="room-image">
+                                            <img src="%7b%21%21%20URL__asset(%27resources/uploads/%27-5.html" alt="" />
+                                            <a class="book-now" href="%7b%21%21%20URL__to(%27booking_details%27%2c%24r-_id%2cis_secured())%20%21%21%7d.html" title="">Book Now</a>
+                                        </div>
+                                        <div class="about-room">
+                                            <div class="room-title">
+                                                <span>{!! $r->room_type_id !!}</span>
+                                                <h4><a title="" href="%7b%21%21%20URL__to(%27room_details%27%2c%24r-_id%2cis_secured())%20%21%21%7d.html">{!! $r->room_type_id !!}</a></h4>
+                                            </div>
+                                            <div align="center">
+                                                <a class="book-now" href="%7b%21%21%20URL__to(%27booking_details%27%2c%24r-_id%2cis_secured())%20%21%21%7d.html" title="">Book Now</a>
+                                            </div>
+
+                                            <div class="room-bottom">
+                                                <span><strong>{!! $r->price !!}</strong> / Night</span>
+                                                <ul>
+                                                    <li><i class="fa fa-wifi"></i></li>
+                                                    <li><i class="fa fa-clock-o"></i></li>
+                                                    <li><i class="fa fa-laptop"></i></li>
+                                                    <li><i class="fa fa-umbrella"></i></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div><!-- Room Package -->
+                                </div>
+                                @endforeach
+                            </div>
+                        </div><!-- Rooms Packages -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+@endsection
+
+@section('on_page_script')
+@endsection

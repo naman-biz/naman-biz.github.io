@@ -1,0 +1,259 @@
+@extends('admin/layouts.admin_layout')
+
+@section('content')
+<div class="panel">
+    <div class="panel-heading">
+        <h3>Create new booking...</h3>
+        <a href="%7b%21%21%20URL__to(%27system/booking%27%2c%27%27%2cis_secured())%20%21%21%7d.html" class="btn btn-md btn-primary btn_hover"><span>All Booking Info.</span></a>
+    </div>
+    <div class="panel-body">
+        @if(Session::has('message'))
+            <h4 class="alert alert-success">{!! Session::get('message') !!}</h4>
+        @endif
+        <div class="row">
+            {!! Form::open(['url'=>URL::to('system/booking','',is_secured())]) !!}
+            <div class="col-sm-6">
+
+                <div class="row">
+                    <div class="col-xs-6">
+                        <label for="">Title</label>
+                        {!! Form::text('title',null,['class'=>'form-control','required'=>'']) !!}
+                    </div>
+                    <div class="col-xs-6">
+                        <p style="margin-bottom:0px;">Booking Type</p>
+                        <select name="book_type" required="" class="selectpicker customSelectpicker" style="margin-top:-5%">
+                         <option value="">select booking type</option>
+                            @foreach($book_type as $r2)
+                                <option value="{!! $r2->name !!}">{!! $r2->name !!}</option>
+                            @endforeach
+                        </select>
+                    </div>
+                    <div class="col-xs-6">
+                        <label for="">Price</label>
+                        {!! Form::text('price',null,['class'=>'form-control','required'=>'']) !!}
+                    </div>
+                    <div class="col-xs-6">
+                        <p style="margin-bottom:0px;">Booking Sub Type</p>
+                        <select name="room_type_id" required="" class="selectpicker customSelectpicker" style="margin-top:-5%">
+                         <option value="">select booking type</option>
+                            @foreach($room_type as $r)
+                                <option value="{!! $r->name !!}">{!! $r->name !!}</option>
+                            @endforeach
+                        </select>
+                    </div>
+
+
+                </div>
+
+                 <div class="row">
+                    <div class="col-xs-6">
+                        <label for="">Bed Type/Others</label> <br>
+                        {!! Form::text('bed_type',null,['class'=>'form-control','required'=>'']) !!}
+                    </div>
+                    <div class="col-xs-6">
+                        <p style="margin-bottom:0px;">Offer Type</p>
+                        <select name="offer_type" required="" class="selectpicker customSelectpicker" style="margin-top:-5%">
+                    
+                                <option value="No Offer">No Offer</option>
+                                <option value="Offer">Offer</option>
+                        </select>
+                    </div>
+                </div>
+             
+                <div class="row">
+                    <div class="col-xs-6">
+                        <label for="">Size/Others</label>
+                        {!! Form::text('size',null,['class'=>'form-control','required'=>'']) !!}
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-xs-12">
+                        <label for="">Description</label>
+                        {!! Form::textarea('description',null,['class'=>'form-control','rows'=>'2','required'=>'']) !!}
+                    </div>
+                </div>
+                <div class="form-group">
+                    {!! Form::submit('SAVE',['class'=>'btn btn-md btn-block btn-info']) !!}
+                </div>
+            </div>
+            <div class="col-sm-6">
+                <div class="row">
+                    <div class="col-xs-12">
+                        <ul class="nav nav-tabs">
+                            <li class="active"><a data-toggle="tab" href="#one">Featured Image</a></li>
+                            <li><a href="#two" data-toggle="tab"> Cover & Thumbnail Image</a></li>
+                        </ul>
+                        <div class="tab-content">
+                            <div id="one" class="tab-pane fade in active">
+                                <div class="form-group">
+                                    <input type="hidden" name="featured_image_data" required>
+                                    <a href="#" data-toggle="modal" data-target="#featured_image" class="btn btn-sm btn-success">UPLOAD</a>
+                                    <div class="featured_image">
+
+                                    </div>
+                                </div>
+                            </div>
+                            <div id="two" class="tab-pane fade">
+                                <table class="table table-bordered image_prev_table text-center">
+                                    <thead>
+                                    <tr>
+                                        <td>Cover IMG <a href="#" data-toggle="modal" data-target=".cover_image" class="btn btn-xs btn-success"> <i class="fa fa-upload"></i> UPLOAD</a></td>
+                                        <td>Action</td>
+                                    </tr>
+                                    </thead>
+                                    <tbody>
+                                    <tr>
+                                        <td class="upload_opener"></td>
+                                        <td><a href="#" class="btn btn-xs btn-info add_row"><i class="fa fa-plus"></i></a></td>
+                                    </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-xs-12 service">
+                        <h4>Services</h4>
+                        @foreach($services as $service)
+                            <span><input type="checkbox" name="service_id[]" value="{!! $service->id !!}" id="" checked> {!! $service->name !!}</span>
+                        @endforeach
+                    </div>
+                </div>
+            </div>
+            {!! Form::close() !!}
+        </div>
+
+    </div>
+</div>
+
+<div aria-hidden="true" aria-labelledby="myModalLabel" role="dialog" tabindex="-1" id="featured_image" class="modal fade">
+    <div class="modal-dialog" style="width:500px">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                <h4 class="modal-title">Media library <span class="badge">Required Size 370x260</span></h4>
+            </div>
+            <div class="modal-body">
+                <div class="row">
+                    <div class="col-xs-12">
+                        <div id="featured_image_editor">
+                            <input type="file" class="cropit-image-input">
+                            <div class="cropit-preview" style="width:370px;height: 270px;"></div>
+                            <div class="image-size-label">
+                                Resize image
+                            </div>
+                            <input type="range" class="cropit-image-zoom-input">
+                            <button class="rotate-ccw">Rotate counterclockwise</button>
+                            <button class="rotate-cw">Rotate clockwise</button>
+                            <button class="export btn btn-xs btn-danger" data-dismiss="modal" data-call_back="my_function">SAVE</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button data-dismiss="modal" class="btn btn-default" type="button">Cancel</button>
+            </div>
+        </div>
+    </div>
+</div>
+<div aria-hidden="true" aria-labelledby="myModalLabel" role="dialog" tabindex="-1" class="modal fade cover_image">
+    <div class="modal-dialog" style="width:1100px">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                <h4 class="modal-title">Media library <span class="badge">Required Size: 1016x387</span></h4>
+            </div>
+            <div class="modal-body">
+                <div class="row">
+                    <div class="col-xs-12">
+                        <div id="cover_image_editor">
+                            <div class="row">
+                                <div class="col-xs-12 col-sm-5">
+                                    <input type="file" class="cropit-image-input">
+                                </div>
+                                <div class="col-xs-12 col-sm-5">
+                                    <table class="table table-responsive table-bordered" style="margin-bottom:0%;">
+                                        <tbody>
+                                        <tr>
+                                            <td><input type="range" class="cropit-image-zoom-input" style="margin-top:2%"></td>
+                                            <td><button class="export btn btn-xs btn-success" data-dismiss="modal"  data-call_back="my_function">SAVE</button></td>
+                                        </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                            <div class="cropit-preview" style="width:1016px;height: 387px;"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button data-dismiss="modal" class="btn btn-default" type="button">Cancel</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+@endsection
+@section('custom_script')
+    <script type="text/javascript">
+        $(document).ready(function () {
+            var featured_image = $('#featured_image_editor');
+            featured_image.cropit({});
+            featured_image.find('.export').click(function() {
+                var imageData = featured_image.cropit('export');
+                $('[name="featured_image_data"]').val(imageData);
+                $('.featured_image').html('<img src="'+imageData+'" alt="" style="width:370px">');
+            });
+
+
+            var cover_image = $('#cover_image_editor');
+            cover_image.cropit({});
+            cover_image.find('.export').click(function() {
+                var imageData = cover_image.cropit('export');
+                $('.image_prev_table tbody').append('\
+                        <tr>\
+                            <td class="upload_opener">\
+                            <img src="'+imageData+'"style="width:200px;height: 100px;" />\
+                            <input type="hidden" name="cover_image_data[]" value="'+imageData+'">\
+                            </td>\
+                            <td>\
+                                <a href="#" class="btn btn-xs btn-danger delete_row"><i class="fa fa-remove"></i></a>\
+                            </td>\
+                        </tr>'
+                );
+
+            });
+
+            $(document).on({
+                click:function(e){
+                    e.preventDefault();
+                    $('.image_prev_table tbody').append('\
+                        <tr>\
+                            <td class="upload_opener"><a href="#" data-toggle="modal" data-target=".cover_image" class="btn btn-sm btn-success">UPLOAD</a></td>\
+                            <td class="upload_opener"><a href="#" data-toggle="modal" data-target=".cover_image" class="btn btn-sm btn-success">UPLOAD</a></td>\
+                            <td>\
+                                <a href="#" class="btn btn-xs btn-info add_row"><i class="fa fa-plus"></i></a>\
+                                <a href="#" class="btn btn-xs btn-danger delete_row"><i class="fa fa-remove"></i></a>\
+                            </td>\
+                        </tr>'
+                    )
+                }
+            },'.add_row');
+            $(document).on({
+                click:function(e){
+                    e.preventDefault();
+                    $(this).closest('tr').remove();
+                }
+            },'.delete_row')
+
+
+
+        })
+    </script>
+@endsection

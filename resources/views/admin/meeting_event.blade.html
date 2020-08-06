@@ -1,0 +1,59 @@
+@extends('admin/layouts.admin_layout')
+
+@section('content')
+<div class="panel">
+    <div class="panel-heading">
+        <h3>Manage all meeting and event...</h3>
+        <a href="%7b%21%21%20URL__to(%27meeting_event/create%27%2c%27%27%2cis_secured())%20%21%21%7d.html" class="btn btn-md btn-primary btn_hover"><span>Add Meeting Event</span></a>
+    </div>
+    <div class="panel-body">
+        @if(Session::has('message'))
+            <h4 class="alert alert-success">{!! Session::get('message') !!}</h4>
+        @endif
+        <table class="table table-bordered table-responsive">
+            <thead>
+                <tr>
+                    <td>SL</td>
+                    <td>Name</td>
+                    <td>Meeting/Event</td>
+                    <td>Management Price</td>
+                    <td>Image</td>
+                    <td>Action</td>
+                </tr>
+            </thead>
+            <tbody>
+                            @foreach($meeting_event as $s)
+                    <tr>
+                        <td>
+                            {!! $i !!}
+                            {!! Form::token() !!}
+                        </td>
+                        <td>{!! $s->name !!}</td>
+                        <td>{!! $s->meeting_event !!}</td>
+                        <td>{!! $s->price !!}</td>
+                        <td>
+                            <img src="%7b%21%21%20URL__asset(%27resources/uploads/%27-4.html" style="width:80px;height:70px;" alt="">
+                        </td>
+                        <td>
+                           <a href="%7b%21%21%20URL__to(%27meeting_event/delete%27%2c%24s-_id%2cis_secured())%20%21%21%7d.html" class="btn btn-danger"  onclick="return confirm('Are you sure you want to delete?');"><i class="fa fa-remove"></i></a>
+
+                            
+                        </td>
+                    </tr>
+                                    @endforeach
+            </tbody>
+        </table>
+
+    </div>
+</div>
+
+
+
+@endsection
+@section('custom_script')
+    <script type="text/javascript">
+        $(document).ready(function () {
+
+        })
+    </script>
+@endsection

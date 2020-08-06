@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="en">
+
+<!-- Mirrored from caspiathehome.com/resources/views/emails/book_order.blade.php by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 06 Aug 2020 12:58:22 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Caspia Room Booking</title>
+</head>
+<body>
+
+
+<table border="3px" style="border-collapse: collapse;">
+	<tr>
+	 <th colspan="2">Customer Details Information</th>
+	</tr>
+	<tr>
+		<th>Customer Name: </th>
+		<th>{!! $order->name !!}</th>
+	</tr>
+	<tr>
+		<td>Customer Mobile No.</td>
+		<td>{!! $order->mobile !!}</td>
+	</tr>
+	<tr>
+		<td>Company Name:</td>
+		<td>{!! $order->companyName !!}</td>
+	</tr>
+	<tr>
+		<td>Position:</td>
+		<td>{!! $order->positon !!}</td>
+	</tr>
+	<tr>
+		<td>Nationality:</td>
+		<td>{!! $order->nationality !!}</td>
+	</tr>
+	<tr>
+		<td>National ID Card Num.:</td>
+		<td>{!! $order->nationalIdCardNumber !!}</td>
+	</tr>
+	<tr>
+	 <th colspan="2">&nbsp;</th>
+	</tr>
+	<tr>
+	 <th colspan="2">Booking Details</th>
+	</tr>
+	<tr>
+		<td>Booking Type:</td>
+		<td>{!! $order->room->book_type !!}</td>
+	</tr>
+	<tr>
+		<td>Booking Title:</td>
+		<td>{!! $order->room->title !!}</td>
+	</tr>
+	<tr>
+		<td>Price:</td>
+		<td>{!! $order->room->price !!}</td>
+	</tr>
+	<tr>
+		<th colspan="2">Date:  Date: {!! $order->created_at !!}</th>
+		
+	</tr>
+	
+<tr>
+	 <th colspan="2">Speacial NOTE</th>
+	</tr>
+	<tr>
+		<th colspan="2">{!! $order->note !!}</th>
+	</tr>
+</table>
+
+</body>
+
+<!-- Mirrored from caspiathehome.com/resources/views/emails/book_order.blade.php by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 06 Aug 2020 12:58:22 GMT -->
+</html>

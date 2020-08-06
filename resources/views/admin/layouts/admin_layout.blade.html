@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+    
+<!-- Mirrored from caspiathehome.com/resources/views/admin/layouts/admin_layout.blade.php by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 06 Aug 2020 13:01:09 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="Php developer,laravel developer,Nodejs developer,android developer">
+        <meta name="author" content="Fuad Hasan">
+        <meta name="keyword" content="coderadiator,admin dashboard,coderadiator admin dashboard,">
+        <link rel="shortcut icon" href="%7b%21%21%20URL__to(%27assets/img/favicon.html">
+        <title>Caspia admin panel</title>
+        <!-- Bootstrap core CSS -->
+        <link href="%7b%21%21%20URL__to(%27resources/assets/admin/assets/css/bootstrap.min.html" rel="stylesheet">
+        <link href="%7b%21%21%20URL__to(%27resources/assets/admin/assets/css/bootstrap-reset.html" rel="stylesheet">
+        <link href="%7b%21%21%20URL__to(%27resources/assets/admin/assets/css/bootstrap_select.html" rel="stylesheet">
+        <link href="%7b%21%21%20URL__to(%27resources/assets/admin/assets/css/datepicker.html" rel="stylesheet">
+        <link href="%7b%21%21%20URL__to(%27resources/assets/admin/assets/css/timepicki.html" rel="stylesheet">
+        <link href="%7b%21%21%20URL__to(%27resources/assets/admin/assets/css/jqueryUiThemeSmothness.html" rel="stylesheet">
+        <link href="%7b%21%21%20URL__to(%27resources/assets/admin/assets/css/font-awesome.min.html" rel="stylesheet" />
+        <link rel="stylesheet" type="text/css" href="%7b%21%21%20URL__to(%27resources/assets/admin/assets/css/sweetalert.html" />
+
+        <!--=====FULL CALENDER CSS====-->
+        <link rel="stylesheet" href="%7b%21%21%20URL__to(%27resources/assets/admin/assets/css/full_calender.min.html">
+        <link rel="stylesheet" href="%7b%21%21%20URL__to(%27resources/assets/admin/assets/css/full_calender.print.html">
+
+        <!-- Custom styles for this template -->
+        <link href="%7b%21%21%20URL__to(%27resources/assets/admin/assets/css/style.html" rel="stylesheet">
+        <link href="%7b%21%21%20URL__to(%27resources/assets/admin/assets/css/style-responsive.html" rel="stylesheet" />
+        <link href="%7b%21%21%20URL__to(%27resources/assets/plugin/css/cropit.html" rel="stylesheet" />
+        <link href="%7b%21%21%20URL__to(%27resources/assets/admin/assets/css/custom.html" rel="stylesheet" />
+
+    </head>
+
+  <body>
+
+        <section id="container" class="">
+            <input type="hidden" id="base_url" name="base_url" value="{!! URL::to('/','',is_secured()) !!}">
+            @include('admin.partials.header')
+            @include('admin.partials.asside_navbar')
+            <section id="main-content">
+                <section class="wrapper">
+                    <div class="row">
+                        @yield('content')
+                    </div>
+                </section>
+            </section>
+            @include('admin.partials.footer')
+        </section>
+
+
+        <!-- js placed at the end of the document so the pages load faster -->
+        <script src="%7b%21%21%20URL__to(%27resources/assets/admin/assets/js/jquery.html"></script>
+        <script src="%7b%21%21%20URL__to(%27resources/assets/admin/assets/js/jquery-ui-1.9.2.custom.min.html"></script>
+        <script src="%7b%21%21%20URL__to(%27resources/assets/admin/assets/js/bootstrap.min.html"></script>
+        <script src="%7b%21%21%20URL__to(%27resources/assets/admin/assets/js/jquery.scrollTo.min.html"></script>
+        <script src="%7b%21%21%20URL__to(%27resources/assets/admin/assets/js/jquery.nicescroll.html" type="text/javascript"></script>
+        <script src="%7b%21%21%20URL__to(%27resources/assets/admin/assets/js/bootstrap-datepicker.html" type="text/javascript"></script>
+        <script src="%7b%21%21%20URL__to(%27resources/assets/admin/assets/js/bootstrap_select.html" type="text/javascript"></script>
+        <script src="%7b%21%21%20URL__to(%27resources/assets/admin/assets/js/timepicki.html" type="text/javascript"></script>
+        <script class="include" type="text/javascript" src="%7b%21%21%20URL__to(%27resources/assets/admin/assets/js/jquery.dcjqaccordion.2.7.html"></script>
+        <script src="%7b%21%21%20URL__to(%27resources/assets/admin/assets/js/respond.min.html" ></script>
+
+        <!--==== MOMENT JS ===-->
+        <script src="%7b%21%21%20URL__to(%27resources/assets/admin/assets/js/moment.html"></script>
+        <!--====== FULL-CALENDER JS ======-->
+        <script type="text/javascript" src="%7b%21%21%20URL__to(%27resources/assets/admin/assets/js/full_calender.min.html"></script>
+
+        <!--common script for all pages-->
+        <script src="%7b%21%21%20URL__to(%27resources/assets/admin/assets/js/common-scripts.html"></script>
+        <script src="%7b%21%21%20URL__to(%27resources/assets/admin/assets/js/custom_script.html"></script>
+        <!--script for this page-->
+        <script type="text/javascript" src="%7b%21%21%20URL__to(%27resources/assets/admin/assets/js/sweetalert.min.html"></script>
+        <script src="../../../../../cdn.ckeditor.com/4.4.7/standard/ckeditor.js"></script>
+        <script src="%7b%21%21%20URL__to(%27resources/assets/admin/assets/js/jstorage.html"></script>
+        <script src="%7b%21%21%20URL__to(%27resources/assets/plugin/js/jquery.cropit.html"></script>
+        <script src="%7b%21%21%20URL__to(%27resources/assets/plugin/js/cropit_init.html"></script>
+        <script src="%7b%21%21%20URL__to(%27resources/assets/admin/assets/js/custom.html"></script>
+        <script type="text/javascript">
+            $(document).ready(function(){
+                $('#main-content').css('min-height',$(window).height());
+                $(document).on({
+                    click:function(e){
+                        e.preventDefault();
+                        delete_with_swal($(this).attr('href'),$(this).closest('tr').find("[name='_token']").val(),$(this).closest('tr'));
+                    }
+                },'.delete_with_swal')
+            })
+
+        </script>
+
+@yield('custom_script')
+</body>
+
+<!-- Mirrored from caspiathehome.com/resources/views/admin/layouts/admin_layout.blade.php by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 06 Aug 2020 13:01:31 GMT -->
+</html>

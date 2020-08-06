@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Mirrored from caspiathehome.com/resources/views/admin/reg-log.blade.php by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 06 Aug 2020 12:58:09 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="Fuad Hasan">
+    <meta name="keyword" content="">
+    <link rel="shortcut icon" href="%7b%21%21%20URL__to(%27assets/img/favicon.html">
+    <title>LLC Board</title>
+    <!-- Bootstrap core CSS -->
+    <link href="%7b%21%21%20URL__to(%27resources/assets/admin/assets/css/bootstrap.min.html" rel="stylesheet">
+    <link href="%7b%21%21%20URL__to(%27resources/assets/admin/assets/css/bootstrap-reset.html" rel="stylesheet">
+    <!--external css-->
+    <link href="../../../../maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet" />
+
+    <link rel="stylesheet" type="text/css" href="%7b%21%21%20URL__to(%27resources/assets/admin/assets/css/datepicker.css%27%2c%27%27%2cis_secured())%20%21%21%7d" />
+    <link rel="stylesheet" type="text/css" href="%7b%21%21%20URL__to(%27resources/assets/admin/assets/css/colorpicker.css%27%2c%27%27%2cis_secured())%20%21%21%7d" />
+    <link rel="stylesheet" type="text/css" href="%7b%21%21%20URL__to(%27resources/assets/admin/assets/css/daterangepicker.html" />
+
+    <!-- Custom styles for this template -->
+    <link href="%7b%21%21%20URL__to(%27resources/assets/admin/assets/css/style.html" rel="stylesheet">
+    <link href="%7b%21%21%20URL__to(%27resources/assets/admin/assets/css/style-responsive.html" rel="stylesheet" />
+
+
+
+</head>
+
+<body class="login-body lock-screen">
+
+<div class="container">
+    <form class="form-signin" action="http://caspiathehome.com/resources/views/admin/{!! URL::to('login','',is_secured()) !!}" method="post">
+        <h2 class="form-signin-heading">sign in now</h2>
+        @if(Session::has('redirect_login_message'))
+            <h4 class="text-danger text-center">Email or password is not matched..</h4>
+        @endif
+        <div class="login-wrap">
+            <input type="text" name="email" class="form-control" value="

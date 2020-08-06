@@ -1,0 +1,501 @@
+<!DOCTYPE html>
+
+<!-- Mirrored from caspiathehome.com/resources/views/front_end/layouts/main_front_layout3.blade.php by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 06 Aug 2020 13:01:56 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Welcome to CASPIA The Home</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="" />
+    <meta name="keywords" content="Fuad,Nodejs developer,Android developer,Php Developer" />
+    <link rel="icon" type="image/icon" href="../resources/assets/front/images/logo.html">
+    <!-- Styles -->
+    <link rel="stylesheet" type="text/css" href="%7b%21%21%20URL__asset(%27resources/assets/front/css/font-awesome.min.html" />
+    <link rel="stylesheet" type="text/css" href="%7b%21%21%20URL__asset(%27resources/assets/front/css/bootstrap.min.html" />
+    <link rel="stylesheet" type="text/css" href="%7b%21%21%20URL__asset(%27resources/assets/front/css/style.html" />
+    <link rel="stylesheet" type="text/css" href="%7b%21%21%20URL__asset(%27resources/assets/front/css/responsive.html" />
+    <link rel="stylesheet" type="text/css" href="%7b%21%21%20URL__asset(%27resources/assets/front/css/color.html" />
+    <style>
+        @font-face { font-family: JuneBug; src: url('../resources/assets/front/fonts/calligr0.html'); } 
+        @font-face { font-family: JuneBug2; src: url('../resources/assets/front/fonts/TheHome.html'); } 
+            .h {
+                font-family: JuneBug;
+                color:#800000;
+               }
+            .theHome
+            {
+                font-family: JuneBug2;
+                font-size: 10px;
+
+            }
+</style>
+<script type="text/javascript">
+    
+function mobileValidation()
+{
+
+    var pn=document.forms["myForm"]["mobile"].value;
+    if(/\D/g.test(pn))
+    {
+        alert("Mobile Number must be numeric value.");
+    }
+}
+
+</script>
+</head>
+<body itemscope>
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+        var js, fjs = d.getElementsByTagName(s)[0];
+        if (d.getElementById(id)) return;
+        js = d.createElement(s); js.id = id;
+        js.src = '../../../../../connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.11&appId=195634037509673';
+        fjs.parentNode.insertBefore(js, fjs);
+    }(document, 'script', 'facebook-jssdk'));</script>
+<div class="theme-layout">
+    <div class="header-container">
+        <div class="registration">
+            <div class="container">
+                <span class="close-btn"><img src="%7b%21%21%20URL__asset(%27resources/assets/front/images/cross.html" alt="" /></span>
+                <div class="registration-form">
+                    <h3>Join For <span>Luxury Rooms</span></h3>
+                    <p>Create an account to get into the luxury world .</p>
+                    <form>
+                        <div class="row">
+                            <div class="col-md-8 column">
+                                <div class="input-fields">
+                                    <div class="row">
+                                        <div class="col-md-6"><input type="text" name="firstname" placeholder="First Name *" /></div>
+                                        <div class="col-md-6"><input type="email" name="email" placeholder="your@email.com *" /></div>
+                                        <div class="col-md-6"><input type="text" name="lastname" placeholder="Last Name *" /></div>
+                                        <div class="col-md-6"><input type="password" name="psw" placeholder="Password *" /></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-4 column">
+                                <p>By creating an account, you agree to our <a href="#" title="">Terms & Conditions.</a></p>
+                                <button class="book-now">Create Account</button>
+                            </div>
+                        </div>
+                    </form><!-- form -->
+                </div>
+                <div class="login-form">
+                    <h3>Sign In <span>Now</span></h3>
+                    <p>Sign in here if you have an account already</p>
+                    <form>
+                        <div class="row">
+                            <div class="col-md-8 column">
+                                <div class="input-fields">
+                                    <div class="row">
+                                        <div class="col-md-6"><input type="email" name="email" placeholder="your@email.com *" /></div>
+                                        <div class="col-md-6"><input type="password" name="psw" placeholder="Password *" /></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-4 column">
+                                <button class="book-now">Sign In</button>
+                            </div>
+                        </div>
+                    </form><!-- form -->
+                </div>
+            </div>
+        </div><!-- Registration -->
+
+        <div class="topbar">
+            <div class="weather-wrapper">
+                <div id="weather"></div>
+            </div>
+            <span class="address"><i class="fa fa-map-marker"></i> Rangpur -5400 </span>
+            <div class="registration-buttons">
+                <a id="register-btn" href="#" title="">Register</a>
+                <a id="login-btn" href="#" title="">Login</a>
+            </div>
+        </div><!-- Topbar -->
+
+        <header>
+            <div class="container">
+                <div class="logo-sec">
+                    <table style="border-bottom: 1px;">
+                        <tr>
+                            <td>
+                               <img style="float:right;width:65px;" src="%7b%21%21%20URL__asset(%27resources/assets/front/images/logo.html" alt="logo" />
+                            </td>
+                            <td>
+                            <h1 class="h" style="margin-top:12px;font-size: 34px">CASPIA<span style="font-size: 15px" class="theHome"> &nbsp;The Home</span></h1>
+                            </td>
+                       
+                        </tr>
+                                   
+                    </table>
+                    <span style="text-align:right;float: right;">A smart Boutique Hotel</span><br><span style="text-align:right;float: right;">Fit for Foreigners & Corporate Guests</span>
+                </div><!-- logo -->
+
+               
+                <ul>
+                   <br>
+                    <a href="%7b%21%21%20URL__to(%27.html#residential','',is_secured()) !!}"><li style="font-size: 18px;color:#800000">Residential</li></a>
+                     <a href="%7b%21%21%20URL__to(%27.html#restaurant','',is_secured()) !!}"><li style="font-size: 18px;color:#800000">Restaurant</li></a>
+                     <a href="%7b%21%21%20URL__to(%27.html#mettingOrEvent','',is_secured()) !!}"><li style="font-size: 18px;color:#800000">Meeting</li></a>
+                     <a href="%7b%21%21%20URL__to(%27.html#mettingOrEvent','',is_secured()) !!}"><li style="font-size: 18px;color:#800000">Events</li></a>
+                </ul>
+               
+                <nav>
+                    
+                   
+                    <ul>
+                        <li class="menu-item-has-children"><a href="%7b%21%21%20URL__to(%27/%27%2c%27%27%2cis_secured())%20%21%21%7d.html" title="">Home</a></li>
+                        <li class="menu-item-has-children"><a href="%7b%21%21%20URL__to(%27services%27%2c%27%27%2cis_secured())%20%21%21%7d.html" title="">Room Traiff</a></li>
+                        <li class="menu-item-has-children"><a href="%7b%21%21%20URL__to(%27services%27%2c%27%27%2cis_secured())%20%21%21%7d.html" title="">Room Feature</a></li>
+
+                        <li class="dropdown">
+                            <a href="#" data-toggle="dropdown"><span style="color:#F00" aria-hidden="true"></span>Book Now <span class="glyphicon glyphicon-chevron-down"></span></a>
+                         <ul class="dropdown-menu"> 
+                             @foreach($book_list as $booking)
+                               <li class="m_2"><a href="%7b%21%21%20URL__to(%27booking/%27.html"><i class="glyphicon glyphicon-menu-right"></i>{!! $booking->book_type !!}</a></li>
+                             @endforeach
+                        </ul>
+                        </li>
+                        <li class="menu-item-has-children"><a href="%7b%21%21%20URL__to(%27.html#mettingOrEvent','',is_secured()) !!}" title="">Metting & Events</a></li>
+                        <li class="menu-item-has-children"><a href="%7b%21%21%20URL__to(%27.html#restaurant','',is_secured()) !!}" title="">Restaurent</a></li>
+                        <li><a href="%7b%21%21%20URL__to(%27about%27%2c%27%27%2cis_secured())%20%21%21%7d.html" title="">About Us</a></li>
+                    </ul>
+                    <table style="float: right;margin-bottom: 10px;">
+                        <tr>
+                            <td>
+                                <h2 style="text-align:right;float: right;font-weight: bold;margin-top: 0px;margin-bottom: 0px">ZAMAN & CO</h2>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <span style="text-align:right;float: right;">1<sup>st</sup> class govt. Contractor, Supplier, Importer & General Merchant</span>
+                            </td>
+                        </tr>
+                    </table>
+                </nav><!-- nav -->
+
+                <span class="responsive-btn"><a href="#" title=""><i class="fa fa-align-center"></i></a></span>
+            </div>
+        </header><!-- Header -->
+
+        <div class="responsive-menu">
+            <ul>
+               <li class="menu-item-has-children"><a href="%7b%21%21%20URL__to(%27/%27%2c%27%27%2cis_secured())%20%21%21%7d.html" title="">Home</a></li>
+                        <li class="menu-item-has-children"><a href="%7b%21%21%20URL__to(%27services%27%2c%27%27%2cis_secured())%20%21%21%7d.html" title="">Room Traiff</a></li>
+                        <li class="menu-item-has-children"><a href="%7b%21%21%20URL__to(%27services%27%2c%27%27%2cis_secured())%20%21%21%7d.html" title="">Room Feature</a></li>
+                        <li class="menu-item-has-children"><a href="%7b%21%21%20URL__to(%27.html#mettingOrEvent','',is_secured()) !!}" title="">Metting & Events</a></li>
+                        <li class="menu-item-has-children"><a href="%7b%21%21%20URL__to(%27booking_now%27%2c%27%27%2cis_secured())%20%21%21%7d.html" title="">Book Now</a></li>
+                        <li class="menu-item-has-children"><a href="%7b%21%21%20URL__to(%27.html#restaurant','',is_secured()) !!}" title="">Restaurent</a></li>
+                        <li><a href="%7b%21%21%20URL__to(%27about%27%2c%27%27%2cis_secured())%20%21%21%7d.html" title="">About Us</a></li>
+            </ul>
+        </div><!-- Responsive Menu -->
+    </div><!-- Header Container -->
+
+
+
+    @yield('content')
+    <footer>
+        <div class="block darkblue-layer">
+            <div data-velocity="-.1" style="background: url({!! URL::asset('resources/assets/front/images/parallax3.html',is_secured()) !!}) repeat scroll 50% 0 transparent;" class="parallax"></div>
+            <div class="container">
+                <div class="footer-widgets">
+                    <div class="row">
+                        <div class="col-md-3">
+                            <div class="widget">
+                                <div class="about-widget">
+                                    <a href="%7b%21%21%20URL__to(%27/%27%2c%27%27%2cis_secured())%20%21%21%7d.html"><img src="%7b%21%21%20URL__asset(%27resources/assets/front/images/logo.html" alt="" style="width:90px; height: 85px" /><span class="h" style="font-size:35px">CASPIA</span></a>
+                                    <h1><span style="font-size:center;color:white;font-family:domine;font-size:18px;font-weight:bold;letter-spacing:0.3px;line-height:50px;margin: 0 0 20px;">&nbsp;&nbsp;&nbsp;&nbsp;LOCATION DISCRIPTION</span></h1>
+                                    <ul>
+                                    <li style="color: white"> Steps away from DC,SP Bungalows, Bangladesh Bank, RDRS Office, CARE BD Office & Zero Point.</li>
+                                    <li style="color: white"> 1 km from Commercial Area & City Corporation Office.</li>
+                                    <li style="color: white"> 3 km from Parjotan Motel & Dhaka Bus Station.</li>
+                                    <li style="color: white"> 35 km from Saidpur Airport.</li>
+                                   
+                                </ul><!-- ul -->
+                                </div>
+                            </div><!-- Widget -->
+                        </div>
+                        <div class="col-md-3">
+                            <div class="widget">
+                                <div class="offers-widget">
+                                    <div class="fb-page" data-href="https://www.facebook.com/caspiathehome" data-tabs="timeline" data-width="600" data-height="320" data-small-header="false" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true"><blockquote cite="https://www.facebook.com/caspiathehome" class="fb-xfbml-parse-ignore"><a href="https://www.facebook.com/caspiathehome">Caspia - The Home</a></blockquote></div>
+                                </div><!-- Offers Widget -->
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="widget">
+                                <div class="offers-widget">
+                              <iframe src="https://www.google.com/maps/embed?pb=!4v1592078469313!6m8!1m7!1seT8Jxahf1mPNhisffR-_lQ!2m2!1d25.75701426032126!2d89.23947631041689!3f226.42191096133152!4f13.080438817888464!5f1.1924812503605782" width="600" height="320" frameborder="0" style="border:0" allowfullscreen></iframe>
+                                </div><!-- Offers Widget -->
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="widget">
+                                <div class="widget-title">
+                                    <h4>Luxury Offer</h4>
+                                    <span>Local Guide</span>
+                                </div>
+                                <ul>
+                                    <li><i class="fa fa-umbrella"></i> Boutiques</li>
+                                    <li><i class="fa fa-laptop"></i> Complimentary wireless internet</li>
+                                    <li><i class="fa fa-clock-o"></i> Private beach with service</li>
+                                    <li><i class="fa fa-wifi"></i> Pet-friendly resort</li>
+                                    <li><i class="fa fa-umbrella"></i> Tennis courts</li>
+                                </ul><!-- ul -->
+                            </div><!-- Luxury Offers -->
+                        </div>
+                    </div>
+                </div><!-- Footer Widgets -->
+            </div>
+        </div>
+    </footer><!-- footer -->
+
+    <div class="bottom-footer">
+        <div class="container">
+            <div class="contact-bar">
+                <div class="col-md-4">
+                    <div class="contact-details">
+                        <span><i class="fa fa-map-marker"></i></span>
+                        <strong>Address:</strong>
+                        <p>Rangpur, Opposite of Circuit House</p>
+                    </div><!-- contact-details -->
+                </div>
+                <div class="col-md-4">
+                    <div class="contact-details dark">
+                        <span><i class="fa fa-phone"></i></span>
+                        <strong>Call Us Now:</strong>
+                        <p>
+                            +88 01977227742
+                        </p>
+                    </div><!-- contact-details -->
+                </div>
+                <div class="col-md-4">
+                    <div class="contact-details">
+                        <span><i class="fa fa-envelope-square"></i></span>
+                        <strong>Email Address:</strong>
+                        <p>caspia.rest@gmail.com</p>
+                    </div><!-- contact-details -->
+                </div>
+            </div><!-- contact-data -->
+            <p>&copy; 2017 <a href="#">CASPIA</a> - All Rights Reserved - Made By <a href="http://zstechbd.com/">ZS technologies</a></p>
+        </div><!-- container -->
+    </div><!-- after-footer -->
+
+
+    <div class="booking-popup">
+        <div class="popup-container">
+            <div class="popup-inner">
+                <span class="close-btn"><img src="%7b%21%21%20URL__asset(%27resources/assets/front/images/cross.html" alt="" /></span>
+                <div class="popup-title">
+                    <span>Any Time Worldwide</span>
+                    <h4>Book Your Room</h4>
+                    <span>Not valid for bookings less than 3 days </span>
+                </div><!-- Popup Title -->
+                <div class="popup-details">
+                    <div class="popup-block">
+                        <div class="row">
+                            <div class="col-md-5 column">
+                                <div class="popup-block-title">
+                                    <span>Any Time</span>
+                                    <h4>Choose Your Date</h4>
+                                </div>
+                            </div>
+                            <div class="col-md-7 column">
+                                <form>
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            <label>Check In</label>
+                                            <div class="field">
+                                                <input class="popupDatepicker" type="text" placeholder="">
+                                                <img class="field-icon" src="%7b%21%21%20URL__asset(%27resources/assets/front/images/calendar.html" alt="" />
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <label>Check Out</label>
+                                            <div class="field">
+                                                <input class="popupDatepicker" type="text" placeholder="">
+                                                <img class="field-icon" src="%7b%21%21%20URL__asset(%27resources/assets/front/images/calendar.html" alt="" />
+                                            </div>
+                                        </div>
+                                        <div class="col-md-4">
+                                            <label>Adults</label>
+                                            <div class="field">
+                                                <input class="inc-dec" value="00" type="text" placeholder="">
+                                            </div>
+                                        </div>
+                                        <div class="col-md-4">
+                                            <label>Kids</label>
+                                            <div class="field">
+                                                <input class="inc-dec" value="00" type="text" placeholder="">
+                                            </div>
+                                        </div>
+                                        <div class="col-md-4">
+                                            <label>Rooms</label>
+                                            <div class="field">
+                                                <input class="inc-dec" value="00" type="text" placeholder="">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </form><!-- Tab Form -->
+                            </div>
+                        </div>
+                    </div><!-- Popup Block -->
+                    <div class="popup-block">
+                        <div class="row">
+                            <div class="col-md-5 column">
+                                <div class="popup-block-title">
+                                    <span>Awesome Rooms</span>
+                                    <h4>Your Room Summary</h4>
+                                </div>
+                            </div>
+                            <div class="col-md-7">
+                                <div class="popup-rooms">
+                                    <div class="popup-room">
+                                        <div class="popup-room-img">
+                                            <img src="%7b%21%21%20URL__asset(%27resources/assets/front/images/popup-room.html" alt="" />
+                                        </div>
+                                        <div class="popup-room-detail">
+                                            <i>Awesome Features Room</i>
+                                            <h5>Super Star Luxury Hotle</h5>
+                                            <div class="room-price-from">
+                                                <strong>Start From </strong>
+                                                <span>$289</span>
+                                                <strong>Per Person</strong>
+                                            </div>
+                                            <a class="book-now" href="#" title="">SEE DETAILS</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div><!-- Popup Block -->
+                    <div class="popup-block">
+                        <div class="row">
+                            <div class="col-md-5 column">
+                                <div class="popup-block-title">
+                                    <span>We Stand By</span>
+                                    <h4>Reservation Details</h4>
+                                </div>
+                            </div>
+                            <div class="col-md-7 column">
+                                <form>
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            <label>First Name</label>
+                                            <div class="field">
+                                                <input type="text" placeholder="" />
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <label>Last Name</label>
+                                            <div class="field">
+                                                <input type="text" placeholder="" />
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <label>Email</label>
+                                            <div class="field">
+                                                <input type="email" placeholder="" />
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <label>Phone</label>
+                                            <div class="field">
+                                                <input type="email" placeholder="" />
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <label>City</label>
+                                            <div class="field">
+                                                <input type="email" placeholder="" />
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <label>Address</label>
+                                            <div class="field">
+                                                <input type="email" placeholder="" />
+                                            </div>
+                                        </div>
+                                        <div class="col-md-12">
+                                            <label>Requirements</label>
+                                            <div class="field textarea">
+                                                <textarea></textarea>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-12">
+                                            <button class="book-now" type="submit">BOOK NOW</button>
+                                        </div>
+                                    </div>
+                                </form><!-- Tab Form -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div><!-- Booking Popup -->
+
+</div>
+
+<script src="%7b%21%21%20URL__asset(%27resources/assets/front/js/jquery.min.html" type="text/javascript"></script>
+<script src="%7b%21%21%20URL__asset(%27resources/assets/front/js/bootstrap.min.html" type="text/javascript"></script>
+<script src="%7b%21%21%20URL__asset(%27resources/assets/front/js/owl.carousel.min.html" type="text/javascript"></script>
+<script src="%7b%21%21%20URL__asset(%27resources/assets/front/js/jquery.poptrox.min.html" type="text/javascript"></script>
+<script src="%7b%21%21%20URL__asset(%27resources/assets/front/js/enscroll-0.5.2.min.html" type="text/javascript"></script>
+<script src="%7b%21%21%20URL__asset(%27resources/assets/front/js/jquery.scrolly.html" type="text/javascript"></script>
+<script src="%7b%21%21%20URL__asset(%27resources/assets/front/js/jquery.isotope.min.html" type="text/javascript"></script>
+<script src="%7b%21%21%20URL__asset(%27resources/assets/front/js/isotope-initialize.html" type="text/javascript"></script>
+<script src="%7b%21%21%20URL__asset(%27resources/assets/front/js/bootstrap-datepicker.min.html" type="text/javascript"></script>
+<script src="%7b%21%21%20URL__asset(%27resources/assets/front/js/userincr.html" type="text/javascript"></script>
+<script src="%7b%21%21%20URL__asset(%27resources/assets/front/js/jquery.simpleWeather.min.html"></script>
+<script src="%7b%21%21%20URL__asset(%27resources/assets/front/js/script.html" type="text/javascript"></script>
+<script type="text/javascript">
+
+    $(window).load(function(){
+
+        /*================== SERVICES CAROUSEL ======================*/
+        $('.service-carousel').owlCarousel({
+            autoplay:true,
+            autoplayTimeout:30000,
+            smartSpeed:2000,
+            loop:true,
+            dots:false,
+            nav:true,
+            margin:10,
+            items:3,
+            autoHeight:true,
+            responsive:{
+                0:{items:1},
+                480:{items:2},
+                767:{items:3},
+                980:{items:3}
+            }
+        });
+
+
+        /*================== CLIENTS CAROUSEL ======================*/
+        $('.clients-carousel').owlCarousel({
+            autoplay:true,
+            autoplayTimeout:30000,
+            smartSpeed:2000,
+            loop:true,
+            dots:false,
+            nav:true,
+            margin:10,
+            items:5,
+            autoHeight:true,
+            responsive:{
+                0:{items:1},
+                480:{items:3},
+                767:{items:4},
+                980:{items:5}
+            }
+        });
+    });
+
+</script>
+@yield('on_page_script')
+
+</body>
+
+<!-- Mirrored from caspiathehome.com/resources/views/front_end/layouts/main_front_layout3.blade.php by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 06 Aug 2020 13:01:58 GMT -->
+</html>

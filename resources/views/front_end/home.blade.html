@@ -1,0 +1,348 @@
+@extends('front_end.layouts.main_front_layout')
+@section('content')
+    <section id=residential>
+        <div class="block no-padding">
+            <div class="row">
+                <div class="col-md-12 column">
+                    <div class="rooms-list">
+                        <ul>
+                                                        @foreach($room_type as $rt)
+                                                                <li class="{!! $start !!}">
+                                    <div class="room">
+                                        <img src="%7b%21%21%20URL__asset(%27resources/uploads/%27-2.html" alt="" />
+                                        <div class="room-name"><h4>{!! $rt->name !!}</h4></div>
+                                        <div class="room-detail">
+                                            <div class="room-inner">
+                                                <h3>{!! $rt->name !!}</h3>
+                                                <p>{!! $rt->title !!}</p>
+                                            </div>
+                                        </div><!-- Room Detail -->
+                                    </div>
+                                </li>
+                                                            @endforeach
+
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section><!-- Rooms Section -->
+
+
+    <section>
+        <div class="block remove-gap gray-layer">
+            <div class="parallax" data-velocity="-.1" style="background: rgba(0, 0, 0, 0) url({!! URL::asset('resources/assets/front/images/parallax1.html',is_secured()) !!}) no-repeat 50% 0;"></div>
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-10 col-md-offset-1 column">
+                        <div class="big-tabs">
+                            <ul class="nav nav-tabs">
+                                <li class="active">
+                                    <a href="#about-hotel" data-toggle="tab">
+                                        <div class="tab-name">
+                                            <i class="fa fa-building"></i>
+                                            <span>We Are<strong>CASPIA </strong></span>
+
+                                        </div>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#find-hotel" data-toggle="tab">
+                                        <div class="tab-name">
+                                            <i class="fa fa-search"></i>
+                                            <span>Any Where Worldwide <strong>Find Your Ideal Hotel</strong></span>
+                                        </div>
+                                    </a>
+                                </li>
+                            </ul>
+                            <div class="tab-content">
+                                <div role="tabpanel" class="tab-pane fade in active" id="about-hotel">
+                                    <div class="tab-data">
+                                        <strong>Welcome To</strong>
+                                        <h4>Covid-19 prevention measures at CASPIA–The Home.</h4>
+                                        <p>1. Wash basin and hand sanitizer at entry
+2. Shoes & full body disinfected on arrival
+3.	Thermal scanner to measure body temperature
+4.	Lobby, Reception, Lifts, Rooms, Restaurants are disinfected every day
+5.	Fresh room linens, towels provided on arrival; change every day
+6.	All rooms have natural air ventilation
+7.	Air conditioners disinfected every day
+8.	Restaurant arranged as per social distancing norms; free room service
+9.	Healthy & safe foods
+10.	Meetings organized with social distancing
+11.	Safe & peaceful environment
+12.	Doctor available on phone.
+<br>
+<br>
+ AT CASPIA WE CARE FOR TOUR SAFETY! 
+</p>
+                                        <ul>
+                                            <li>
+                                                <p>World Best Resort No</p>
+                                                <span>06</span>
+                                            </li>
+                                            <li>
+                                                <p>We Are Awarded In</p>
+                                                <span>2014</span>
+                                            </li>
+                                            <li>
+                                                <p>Brunches In Countries</p>
+                                                <span>24</span>
+                                            </li>
+                                        </ul><!-- ul -->
+                                    </div><!-- tabs-data -->
+                                </div>
+                                <div role="tabpanel" class="tab-pane fade" id="find-hotel">
+                                    <div class="tab-form">
+                                        <div class="tab-from-title">
+                                            <span>Any Time Worldwide</span>
+                                            <h4>Find Your Ideal Hotel</h4>
+                                        </div>
+                                        <form action="#">
+                                            <div class="row">
+                                                <div class="col-md-3">
+                                                    <label>Check In</label>
+                                                    <div class="field">
+                                                        <input class="popupDatepicker" type="text" placeholder="Select Date">
+                                                        <img class="field-icon" src="%7b%21%21%20URL__asset(%27resources/assets/front/images/calendar.html" alt="" />
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-3">
+                                                    <label>Check Out</label>
+                                                    <div class="field">
+                                                        <input class="popupDatepicker" type="text" placeholder="Select Date">
+                                                        <img class="field-icon" src="%7b%21%21%20URL__asset(%27resources/assets/front/images/calendar.html" alt="" />
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-2">
+                                                    <label>Adults</label>
+                                                    <div class="field">
+                                                        <input class="inc-dec" value="00" type="text" placeholder="">
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-2">
+                                                    <label>Kids</label>
+                                                    <div class="field">
+                                                        <input class="inc-dec" value="00" type="text" placeholder="">
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-2">
+                                                    <label>Rooms</label>
+                                                    <div class="field">
+                                                        <input class="inc-dec" value="00" type="text" placeholder="">
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-12">
+                                                    <button class="book-now" type="submit">Search Now</button>
+                                                </div>
+                                            </div>
+                                        </form><!-- Tab Form -->
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div><!-- container -->
+        </div><!-- block -->
+    </section><!-- Tabs Section -->
+ 
+ <section id="mettingOrEvent">
+        <div class="block gray darkblue-layer half-parallax">
+            <div class="parallax" data-velocity="-.1" style="background: rgba(0, 0, 0, 0) url({!! URL::asset('resources/assets/front/images/parallax2.html',is_secured()) !!}) no-repeat 50% 0;"></div>
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12 column">
+                        <div class="service-area">
+                            <div class="row">
+                                <div class="col-md-4">
+                                    <div class="service-title">
+                                       
+                                        <h3 >Metting & Events</h3>
+                                        <p style="font-size: 14px">We can arrange 3 conferences or meeting or trainings venue at a time in level-2 and level-3.</p>
+                                       <div class="col-md-12">
+                                    <a href="%7b%21%21%20URL__to(%27detailsMettingOrEvents%27%2c%27%27%2cis_secured())%20%21%21%7d.html" class="btn btn-md btn-success full-right">Read more</a>
+                                </div>
+                                       
+                                    </div><!-- Service Title -->
+                                </div>
+                                <div class="col-md-8">
+                                    <div class="service-carousel">
+                                        @foreach($meetingEvent as $meetingEvent2)
+                                        <div class="service-box">
+                                            <img src="%7b%21%21%20URL__asset(%27resources/uploads/%27-3.html" alt="" />
+                                            <div class="service-name">
+                                                <span style="color:white;font-size: 16px;">{!! $meetingEvent2->meeting_event !!}</span>
+                                                <h5><a href="#" title="">{!! $meetingEvent2->name !!}</a></h5>
+                                            </div>
+                                        </div><!-- Service Box -->
+                                        @endforeach
+                                    </div><!-- Service Carousel -->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section><!-- Services Section -->
+
+
+    <section>
+        <div class="block gray darkblue-layer half-parallax">
+            <div class="parallax" data-velocity="-.1" style="background: rgba(0, 0, 0, 0) url({!! URL::asset('resources/assets/front/images/parallax2.html',is_secured()) !!}) no-repeat 50% 0;"></div>
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12 column">
+                        <div class="service-area">
+                            <div class="row">
+                                <div class="col-md-4">
+                                    <div class="service-title">
+                                        <p>Let Go With Us</p>
+                                        <h3>Luxurious Offers</h3>
+                                       
+                                    </div><!-- Service Title -->
+                                </div>
+                                <div class="col-md-8">
+                                    <div class="service-carousel">
+                                        @foreach($offers as $offersdata)
+
+                                        <div class="service-box">
+                                            <img src="%7b%21%21%20URL__asset(%27resources/uploads/%27-4.html" alt="" />
+                                            <div class="service-name">
+                                                <span style="color:white;font-size: 20px; margin-top: -10px">Offer</span>
+                                                <h5><a href="%7b%21%21%20URL__to(%27booking_details%27%2c%24offersdata-_id%2cis_secured())%20%21%21%7d.html" title="Details of {!! $offersdata->room_type_id !!}">{!! $offersdata->room_type_id !!}</a></h5>
+                                            </div>
+                                        </div><!-- Service Box -->
+                                        @endforeach
+                                    </div><!-- Service Carousel -->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section><!-- Services Section -->
+
+
+    <section id="resturant_section">
+        <div class="block remove-gap gray">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="title">
+                            <h4 id="restaurant">resturant</h4>
+                        </div><!-- Title -->
+                        <div class="row narrow">
+                            <div class="gallery masonary">
+                                <div class="col-md-2">
+                                    <div class="gallery-box">
+                                        <img src="%7b%21%21%20URL__asset(%27resources/assets/front/images/gallery1.html" alt="" />
+                                        <div class="gallery-hover">
+                                            <div class="gallery-inner">
+                                                <span><strong class="amount">$29.00 </strong>/ APPETIZER</span>
+
+                                                <ul>
+                                                    <li><a href="#" title="">Dinner</a></li>
+                                                    <li><a href="#" title="">Breakfast</a></li>
+                                                </ul>
+
+                                            </div>
+                                        </div>
+                                    </div><!-- Gallery Box -->
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="gallery-box bottom">
+                                        <img src="%7b%21%21%20URL__asset(%27resources/assets/front/images/gallery2.html" alt="" />
+                                        <div class="gallery-hover">
+                                            <div class="gallery-inner">
+                                                <span><strong class="amount">$93.00 </strong>/ Extra</span>
+
+                                                <ul>
+                                                    <li><a href="#" title="">Buffet is more appetising</a></li>
+                                                    <li><a href="#" title="">Try some of our highest rated party food recipes - big salads, quiches and sweet treats for a generous buffet party spread</a></li>
+                                                </ul>
+
+                                            </div>
+                                        </div>
+                                    </div><!-- Gallery Box -->
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="gallery-box">
+                                        <img src="%7b%21%21%20URL__asset(%27resources/assets/front/images/gallery3.html" alt="" />
+                                        <div class="gallery-hover">
+                                            <div class="gallery-inner">
+                                                <span><strong class="amount">$58.00 </strong>/ SOUP</span>
+                                                <ul>
+                                                    <li><a href="#" title="">SZECHUAN,CHINESE&THAI STYLE</a></li>
+                                                    <li><a href="#" title="">That can be made ahead of time and taste fine served at room temperature </a></li>
+                                                </ul>
+
+                                            </div>
+                                        </div>
+                                    </div><!-- Gallery Box -->
+                                </div>
+                                <div class="col-md-12">
+                                    <div class="gallery-box left">
+                                        <img src="%7b%21%21%20URL__asset(%27resources/assets/front/images/gallery4.html" alt="" />
+                                        <div class="gallery-hover">
+                                            <div class="gallery-inner">
+                                                <span><strong class="amount">$59.00 </strong>/ RICE</span>
+                                                <ul>
+                                                    <li><a href="#" title="">SZECHUAN,CHINESE&THAI STYLE</a></li>
+                                                    <li><a href="#" title="">Just pick the options you like and the amount required to meet your budget and party numbers</a></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div><!-- Gallery Box -->
+                                </div>
+                                <div class="col-md-12">
+                                    <a target="_blank" href="%7b%21%21%20URL__asset(%27resources/uploads/caspia-complete-menu-2014.html" class="btn btn-md btn-success">Download Full Menu</a>
+                                </div>
+                            </div>
+                        </div><!-- Gallery -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <div class="block less-spacing">
+            <div class="container">
+            <h1 style="text-align:center;color:#555555;font-family:domine;font-size:33px;font-weight:bold;letter-spacing:0.3px;line-height:50px;margin: 0 0 20px;">Our Service</h1>
+                <div class="row">
+                    <div class="col-md-12 column">
+                        <div class="clients-carousel">
+                            <div class="client">
+                                <a title="" href="#"><img src="%7b%21%21%20URL__asset(%27resources/assets/front/images/client1.html" alt="" /></a>
+                            </div><!-- Client -->
+                            <div class="client">
+                                <a title="" href="#"><img src="%7b%21%21%20URL__asset(%27resources/assets/front/images/client2.html" alt="" /></a>
+                            </div><!-- Client -->
+                            <div class="client">
+                                <a title="" href="#"><img src="%7b%21%21%20URL__asset(%27resources/assets/front/images/client3.html" alt="" /></a>
+                            </div><!-- Client -->
+                            <div class="client">
+                                <a title="" href="#"><img src="%7b%21%21%20URL__asset(%27resources/assets/front/images/client4.html" alt="" /></a>
+                            </div><!-- Client -->
+                            <div class="client">
+                                <a title="" href="#"><img src="%7b%21%21%20URL__asset(%27resources/assets/front/images/client5.html" alt="" /></a>
+                            </div><!-- Client -->
+                            <div class="client">
+                                <a title="" href="#"><img src="%7b%21%21%20URL__asset(%27resources/assets/front/images/client1.html" alt="" /></a>
+                            </div><!-- Client -->
+                            <div class="client">
+                                <a title="" href="#"><img src="%7b%21%21%20URL__asset(%27resources/assets/front/images/client2.html" alt="" /></a>
+                            </div><!-- Client -->
+                        </div><!-- Clients Carousel -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+@endsection
+
+@section('on_page_script')
+@endsection

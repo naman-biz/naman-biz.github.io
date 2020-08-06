@@ -1,0 +1,48 @@
+<title>Our Service</title>
+@extends('front_end.layouts.main_front_layout')
+@section('content')
+
+    <div class="pagetop">
+        <div class="container">
+            <h1>SERVICES</h1>
+            <ul>
+                <li><a title="" href="%7b%21%21%20URL__to(%27/%27%2c%27%27%2cis_secured())%20%21%21%7d.html">Home</a></li>
+                <li>Services</li>
+            </ul>
+        </div>
+    </div><!-- Page Top -->
+
+
+
+    <section>
+        <div class="block gray">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12 column">
+                        <div class="services-page">
+                            <div class="row">
+                                @foreach($services as $sr)
+                                <div class="col-md-3">
+                                    <div class="service-box">
+                                        <img src="%7b%21%21%20URL__asset(%27resources/uploads/%27-6.html" alt="" />
+                                        <div class="service-name">
+                                            <span><img src="%7b%21%21%20URL__asset(%27resources/assets/front/images/service-icon1.html" alt="" /></span>
+                                            <h5><a  title="">{!! $sr->name !!}</a></h5>
+                                            <h5 style="margin-top:2px"><a style="margin-top:2px"  title="">Price: {!! $sr->price !!} Tk</a></h5>
+                                        </div>
+                                    </div><!-- Service Box -->
+                                </div>
+                                @endforeach
+                            </div>
+                        </div><!-- Services Page -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+@endsection
+
+@section('on_page_script')
+@endsection

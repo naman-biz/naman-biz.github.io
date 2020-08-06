@@ -1,0 +1,886 @@
+<!DOCTYPE html>
+
+<!-- Mirrored from caspiathehome.com/ by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 06 Aug 2020 12:22:28 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Welcome to CASPIA The Home</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="" />
+    <meta name="keywords" content="Fuad,Nodejs developer,Android developer,Php Developer" />
+    <link rel="icon" type="image/icon" href="resources/assets/front/images/logo.png">
+    <!-- Styles -->
+    <link rel="stylesheet" type="text/css" href="resources/assets/front/css/font-awesome.min.css" />
+    <link rel="stylesheet" type="text/css" href="resources/assets/front/css/bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="resources/assets/front/css/style.css" />
+    <link rel="stylesheet" type="text/css" href="resources/assets/front/css/responsive.css" />
+    <link rel="stylesheet" type="text/css" href="resources/assets/front/css/color.css" />
+    <style>
+        @font-face { font-family: JuneBug; src: url('resources/assets/front/fonts/calligr0.ttf'); } 
+        @font-face { font-family: JuneBug2; src: url('resources/assets/front/fonts/TheHome.otf'); } 
+            .h {
+                font-family: JuneBug;
+                color:#800000;
+               }
+            .theHome
+            {
+                font-family: JuneBug2;
+                font-size: 10px;
+
+            }
+</style>
+<script type="text/javascript">
+    
+function mobileValidation()
+{
+
+    var pn=document.forms["myForm"]["mobile"].value;
+    if(/\D/g.test(pn))
+    {
+        alert("Mobile Number must be numeric value.");
+    }
+}
+
+</script>
+</head>
+<body itemscope>
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+        var js, fjs = d.getElementsByTagName(s)[0];
+        if (d.getElementById(id)) return;
+        js = d.createElement(s); js.id = id;
+        js.src = '../connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.11&appId=195634037509673';
+        fjs.parentNode.insertBefore(js, fjs);
+    }(document, 'script', 'facebook-jssdk'));</script>
+<div class="theme-layout">
+    <div class="header-container">
+        <div class="registration">
+            <div class="container">
+                <span class="close-btn"><img src="resources/assets/front/images/cross.png" alt="" /></span>
+                <div class="registration-form">
+                    <h3>Join For <span>Luxury Rooms</span></h3>
+                    <p>Create an account to get into the luxury world .</p>
+                    <form>
+                        <div class="row">
+                            <div class="col-md-8 column">
+                                <div class="input-fields">
+                                    <div class="row">
+                                        <div class="col-md-6"><input type="text" name="firstname" placeholder="First Name *" /></div>
+                                        <div class="col-md-6"><input type="email" name="email" placeholder="your@email.com *" /></div>
+                                        <div class="col-md-6"><input type="text" name="lastname" placeholder="Last Name *" /></div>
+                                        <div class="col-md-6"><input type="password" name="psw" placeholder="Password *" /></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-4 column">
+                                <p>By creating an account, you agree to our <a href="#" title="">Terms & Conditions.</a></p>
+                                <button class="book-now">Create Account</button>
+                            </div>
+                        </div>
+                    </form><!-- form -->
+                </div>
+                <div class="login-form">
+                    <h3>Sign In <span>Now</span></h3>
+                    <p>Sign in here if you have an account already</p>
+                    <form>
+                        <div class="row">
+                            <div class="col-md-8 column">
+                                <div class="input-fields">
+                                    <div class="row">
+                                        <div class="col-md-6"><input type="email" name="email" placeholder="your@email.com *" /></div>
+                                        <div class="col-md-6"><input type="password" name="psw" placeholder="Password *" /></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-4 column">
+                                <button class="book-now">Sign In</button>
+                            </div>
+                        </div>
+                    </form><!-- form -->
+                </div>
+            </div>
+        </div><!-- Registration -->
+
+        <div class="topbar">
+            <div class="weather-wrapper">
+                <div id="weather"></div>
+            </div>
+            <span class="address"><i class="fa fa-map-marker"></i> Rangpur -5400 </span>
+            <div class="registration-buttons">
+                <a id="register-btn" href="#" title="">Register</a>
+                <a id="login-btn" href="#" title="">Login</a>
+            </div>
+        </div><!-- Topbar -->
+
+        <header>
+            <div class="container">
+                <div class="logo-sec">
+                    <table style="border-bottom: 1px;">
+                        <tr>
+                            <td>
+                               <img style="float:right;width:65px;" src="resources/assets/front/images/logo.png" alt="logo" />
+                            </td>
+                            <td>
+                            <h1 class="h" style="margin-top:12px;font-size: 34px">CASPIA<span style="font-size: 15px" class="theHome"> &nbsp;The Home</span></h1>
+                            </td>
+                       
+                        </tr>
+                                   
+                    </table>
+                    <span style="text-align:right;float: right;">A smart Boutique Hotel</span><br><span style="text-align:right;float: right;">Fit for Foreigners & Corporate Guests</span>
+                </div><!-- logo -->
+
+               
+                <ul>
+                   <br>
+                    <a href="#residential"><li style="font-size: 18px;color:#800000">Residential</li></a>
+                     <a href="#restaurant"><li style="font-size: 18px;color:#800000">Restaurant</li></a>
+                     <a href="#mettingOrEvent"><li style="font-size: 18px;color:#800000">Meeting</li></a>
+                     <a href="#mettingOrEvent"><li style="font-size: 18px;color:#800000">Events</li></a>
+                </ul>
+               
+                <nav>
+                    
+                   
+                    <ul>
+                        <li class="menu-item-has-children"><a href="index.html" title="">Home</a></li>
+                        <li class="menu-item-has-children"><a href="services.html" title="">Room Traiff</a></li>
+                        <li class="menu-item-has-children"><a href="services.html" title="">Room Feature</a></li>
+
+                        <li class="dropdown">
+                            <a href="#" data-toggle="dropdown"><span style="color:#F00" aria-hidden="true"></span>Book Now <span class="glyphicon glyphicon-chevron-down"></span></a>
+                         <ul class="dropdown-menu"> 
+                                                            <li class="m_2"><a href="booking/Delux%20Single.html"><i class="glyphicon glyphicon-menu-right"></i>Delux Single</a></li>
+                                                     </ul>
+                        </li>
+                        <li class="menu-item-has-children"><a href="#mettingOrEvent" title="">Metting & Events</a></li>
+                        <li class="menu-item-has-children"><a href="#restaurant" title="">Restaurent</a></li>
+                        <li><a href="about.html" title="">About Us</a></li>
+
+                    </ul>
+                    <table style="float: right;margin-bottom: 10px;">
+                        <tr>
+                            <td>
+                                <h2 style="text-align:right;float: right;font-weight: bold;margin-top: 0px;margin-bu">ZAMAN & CO</h2>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <span style="text-align:right;float: right;">1<sup>st</sup> class govt. Contractor, Supplier, Importer & General Merchant</span>
+                            </td>
+                        </tr>
+                    </table>
+
+
+                </nav><!-- nav -->
+
+                <span class="responsive-btn"><a href="#" title=""><i class="fa fa-align-center"></i></a></span>
+            </div>
+        </header><!-- Header -->
+
+        <div class="responsive-menu">
+            <ul>
+               <li class="menu-item-has-children"><a href="index.html" title="">Home</a></li>
+                        <li class="menu-item-has-children"><a href="services.html" title="">Room Traiff</a></li>
+                        <li class="menu-item-has-children"><a href="services.html" title="">Room Feature</a></li>
+                        <li class="menu-item-has-children"><a href="#mettingOrEvent" title="">Metting & Events</a></li>
+                         <li class="menu-item-has-children"><a href="booking_now.html" title="">Book Now</a></li>
+                        <li class="menu-item-has-children"><a href="#restaurant" title="">Restaurent</a></li>
+                        <li><a href="about.html" title="">About Us</a></li>
+            </ul>
+        </div><!-- Responsive Menu -->
+    </div><!-- Header Container -->
+
+
+
+        <section id=residential>
+        <div class="block no-padding">
+            <div class="row">
+                <div class="col-md-12 column">
+                    <div class="rooms-list">
+                        <ul>
+                                                                                                                        <li class="">
+                                    <div class="room">
+                                        <img src="resources/uploads/UgKljWyrv6kRfsAjBP2dV7rxa.jpg" alt="" />
+                                        <div class="room-name"><h4>Covid-19 prevention</h4></div>
+                                        <div class="room-detail">
+                                            <div class="room-inner">
+                                                <h3>Covid-19 prevention</h3>
+                                                <p>CASPIA – The Home.</p>
+                                            </div>
+                                        </div><!-- Room Detail -->
+                                    </div>
+                                </li>
+                                                                                                                            <li class="">
+                                    <div class="room">
+                                        <img src="resources/uploads/Cg4ynnnEUmfUzsbOTBAvmak9I.jpg" alt="" />
+                                        <div class="room-name"><h4>Delux Twin</h4></div>
+                                        <div class="room-detail">
+                                            <div class="room-inner">
+                                                <h3>Delux Twin</h3>
+                                                <p>Best Room</p>
+                                            </div>
+                                        </div><!-- Room Detail -->
+                                    </div>
+                                </li>
+                                                                                                                            <li class="start">
+                                    <div class="room">
+                                        <img src="resources/uploads/JE8xrlTIHgPp8w6VRVVL3PTVU.jpg" alt="" />
+                                        <div class="room-name"><h4>Super Delux Double</h4></div>
+                                        <div class="room-detail">
+                                            <div class="room-inner">
+                                                <h3>Super Delux Double</h3>
+                                                <p>Best Room</p>
+                                            </div>
+                                        </div><!-- Room Detail -->
+                                    </div>
+                                </li>
+                                                                                                                            <li class="">
+                                    <div class="room">
+                                        <img src="resources/uploads/tD3URTHrb0TxP7BHROejuwHXF.jpg" alt="" />
+                                        <div class="room-name"><h4>Super Delux Twin</h4></div>
+                                        <div class="room-detail">
+                                            <div class="room-inner">
+                                                <h3>Super Delux Twin</h3>
+                                                <p>Best Room</p>
+                                            </div>
+                                        </div><!-- Room Detail -->
+                                    </div>
+                                </li>
+                                                                                                                            <li class="">
+                                    <div class="room">
+                                        <img src="resources/uploads/9BW5IrRj7Ja5nikzsWlEgEExR.jpg" alt="" />
+                                        <div class="room-name"><h4>Executive Suite</h4></div>
+                                        <div class="room-detail">
+                                            <div class="room-inner">
+                                                <h3>Executive Suite</h3>
+                                                <p>Best Suite Room</p>
+                                            </div>
+                                        </div><!-- Room Detail -->
+                                    </div>
+                                </li>
+                                                            
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section><!-- Rooms Section -->
+
+
+    <section>
+        <div class="block remove-gap gray-layer">
+            <div class="parallax" data-velocity="-.1" style="background: rgba(0, 0, 0, 0) url(resources/assets/front/images/parallax1.jpg) no-repeat 50% 0;"></div>
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-10 col-md-offset-1 column">
+                        <div class="big-tabs">
+                            <ul class="nav nav-tabs">
+                                <li class="active">
+                                    <a href="#about-hotel" data-toggle="tab">
+                                        <div class="tab-name">
+                                            <i class="fa fa-building"></i>
+                                            <span>We Are<strong>CASPIA </strong></span>
+
+                                        </div>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#find-hotel" data-toggle="tab">
+                                        <div class="tab-name">
+                                            <i class="fa fa-search"></i>
+                                            <span>Any Where Worldwide <strong>Find Your Ideal Hotel</strong></span>
+                                        </div>
+                                    </a>
+                                </li>
+                            </ul>
+                            <div class="tab-content">
+                                <div role="tabpanel" class="tab-pane fade in active" id="about-hotel">
+                                    <div class="tab-data">
+                                        <strong>Welcome To</strong>
+                                        <h4>Covid-19 prevention measures at CASPIA–The Home.</h4>
+                                        <p>1. Wash basin and hand sanitizer at entry
+2. Shoes & full body disinfected on arrival
+3.	Thermal scanner to measure body temperature
+4.	Lobby, Reception, Lifts, Rooms, Restaurants are disinfected every day
+5.	Fresh room linens, towels provided on arrival; change every day
+6.	All rooms have natural air ventilation
+7.	Air conditioners disinfected every day
+8.	Restaurant arranged as per social distancing norms; free room service
+9.	Healthy & safe foods
+10.	Meetings organized with social distancing
+11.	Safe & peaceful environment
+12.	Doctor available on phone.
+<br>
+<br>
+ AT CASPIA WE CARE FOR TOUR SAFETY! 
+</p>
+                                        <ul>
+                                            <li>
+                                                <p>World Best Resort No</p>
+                                                <span>06</span>
+                                            </li>
+                                            <li>
+                                                <p>We Are Awarded In</p>
+                                                <span>2014</span>
+                                            </li>
+                                            <li>
+                                                <p>Brunches In Countries</p>
+                                                <span>24</span>
+                                            </li>
+                                        </ul><!-- ul -->
+                                    </div><!-- tabs-data -->
+                                </div>
+                                <div role="tabpanel" class="tab-pane fade" id="find-hotel">
+                                    <div class="tab-form">
+                                        <div class="tab-from-title">
+                                            <span>Any Time Worldwide</span>
+                                            <h4>Find Your Ideal Hotel</h4>
+                                        </div>
+                                        <form action="#">
+                                            <div class="row">
+                                                <div class="col-md-3">
+                                                    <label>Check In</label>
+                                                    <div class="field">
+                                                        <input class="popupDatepicker" type="text" placeholder="Select Date">
+                                                        <img class="field-icon" src="resources/assets/front/images/calendar.png" alt="" />
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-3">
+                                                    <label>Check Out</label>
+                                                    <div class="field">
+                                                        <input class="popupDatepicker" type="text" placeholder="Select Date">
+                                                        <img class="field-icon" src="resources/assets/front/images/calendar.png" alt="" />
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-2">
+                                                    <label>Adults</label>
+                                                    <div class="field">
+                                                        <input class="inc-dec" value="00" type="text" placeholder="">
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-2">
+                                                    <label>Kids</label>
+                                                    <div class="field">
+                                                        <input class="inc-dec" value="00" type="text" placeholder="">
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-2">
+                                                    <label>Rooms</label>
+                                                    <div class="field">
+                                                        <input class="inc-dec" value="00" type="text" placeholder="">
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-12">
+                                                    <button class="book-now" type="submit">Search Now</button>
+                                                </div>
+                                            </div>
+                                        </form><!-- Tab Form -->
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div><!-- container -->
+        </div><!-- block -->
+    </section><!-- Tabs Section -->
+ 
+ <section id="mettingOrEvent">
+        <div class="block gray darkblue-layer half-parallax">
+            <div class="parallax" data-velocity="-.1" style="background: rgba(0, 0, 0, 0) url(resources/assets/front/images/parallax2.jpg) no-repeat 50% 0;"></div>
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12 column">
+                        <div class="service-area">
+                            <div class="row">
+                                <div class="col-md-4">
+                                    <div class="service-title">
+                                       
+                                        <h3 >Metting & Events</h3>
+                                        <p style="font-size: 14px">We can arrange 3 conferences or meeting or trainings venue at a time in level-2 and level-3.</p>
+                                       <div class="col-md-12">
+                                    <a href="detailsMettingOrEvents" class="btn btn-md btn-success full-right">Read more</a>
+                                </div>
+                                       
+                                    </div><!-- Service Title -->
+                                </div>
+                                <div class="col-md-8">
+                                    <div class="service-carousel">
+                                                                                <div class="service-box">
+                                            <img src="resources/uploads/SKMIZvftbDqzqjMu35HjQlchY.jpg" alt="" />
+                                            <div class="service-name">
+                                                <span style="color:white;font-size: 16px;">Event</span>
+                                                <h5><a href="#" title="">National Bank</a></h5>
+                                            </div>
+                                        </div><!-- Service Box -->
+                                                                                <div class="service-box">
+                                            <img src="resources/uploads/eq33MolTohMr9l4oiBSPvGQOe.jpg" alt="" />
+                                            <div class="service-name">
+                                                <span style="color:white;font-size: 16px;">Meeting</span>
+                                                <h5><a href="#" title="">Standrad Bank Lts.</a></h5>
+                                            </div>
+                                        </div><!-- Service Box -->
+                                                                            </div><!-- Service Carousel -->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section><!-- Services Section -->
+
+
+    <section>
+        <div class="block gray darkblue-layer half-parallax">
+            <div class="parallax" data-velocity="-.1" style="background: rgba(0, 0, 0, 0) url(resources/assets/front/images/parallax2.jpg) no-repeat 50% 0;"></div>
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12 column">
+                        <div class="service-area">
+                            <div class="row">
+                                <div class="col-md-4">
+                                    <div class="service-title">
+                                        <p>Let Go With Us</p>
+                                        <h3>Luxurious Offers</h3>
+                                       
+                                    </div><!-- Service Title -->
+                                </div>
+                                <div class="col-md-8">
+                                    <div class="service-carousel">
+                                                                            </div><!-- Service Carousel -->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section><!-- Services Section -->
+
+
+    <section id="resturant_section">
+        <div class="block remove-gap gray">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="title">
+                            <h4 id="restaurant">resturant</h4>
+                        </div><!-- Title -->
+                        <div class="row narrow">
+                            <div class="gallery masonary">
+                                <div class="col-md-2">
+                                    <div class="gallery-box">
+                                        <img src="resources/assets/front/images/gallery1.jpg" alt="" />
+                                        <div class="gallery-hover">
+                                            <div class="gallery-inner">
+                                                <span><strong class="amount">$29.00 </strong>/ APPETIZER</span>
+
+                                                <ul>
+                                                    <li><a href="#" title="">Dinner</a></li>
+                                                    <li><a href="#" title="">Breakfast</a></li>
+                                                </ul>
+
+                                            </div>
+                                        </div>
+                                    </div><!-- Gallery Box -->
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="gallery-box bottom">
+                                        <img src="resources/assets/front/images/gallery2.jpg" alt="" />
+                                        <div class="gallery-hover">
+                                            <div class="gallery-inner">
+                                                <span><strong class="amount">$93.00 </strong>/ Extra</span>
+
+                                                <ul>
+                                                    <li><a href="#" title="">Buffet is more appetising</a></li>
+                                                    <li><a href="#" title="">Try some of our highest rated party food recipes - big salads, quiches and sweet treats for a generous buffet party spread</a></li>
+                                                </ul>
+
+                                            </div>
+                                        </div>
+                                    </div><!-- Gallery Box -->
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="gallery-box">
+                                        <img src="resources/assets/front/images/gallery3.jpg" alt="" />
+                                        <div class="gallery-hover">
+                                            <div class="gallery-inner">
+                                                <span><strong class="amount">$58.00 </strong>/ SOUP</span>
+                                                <ul>
+                                                    <li><a href="#" title="">SZECHUAN,CHINESE&THAI STYLE</a></li>
+                                                    <li><a href="#" title="">That can be made ahead of time and taste fine served at room temperature </a></li>
+                                                </ul>
+
+                                            </div>
+                                        </div>
+                                    </div><!-- Gallery Box -->
+                                </div>
+                                <div class="col-md-12">
+                                    <div class="gallery-box left">
+                                        <img src="resources/assets/front/images/gallery4.jpg" alt="" />
+                                        <div class="gallery-hover">
+                                            <div class="gallery-inner">
+                                                <span><strong class="amount">$59.00 </strong>/ RICE</span>
+                                                <ul>
+                                                    <li><a href="#" title="">SZECHUAN,CHINESE&THAI STYLE</a></li>
+                                                    <li><a href="#" title="">Just pick the options you like and the amount required to meet your budget and party numbers</a></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div><!-- Gallery Box -->
+                                </div>
+                                <div class="col-md-12">
+                                    <a target="_blank" href="resources/uploads/caspia-complete-menu-2014.pdf" class="btn btn-md btn-success">Download Full Menu</a>
+                                </div>
+                            </div>
+                        </div><!-- Gallery -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <div class="block less-spacing">
+            <div class="container">
+            <h1 style="text-align:center;color:#555555;font-family:domine;font-size:33px;font-weight:bold;letter-spacing:0.3px;line-height:50px;margin: 0 0 20px;">Our Service</h1>
+                <div class="row">
+                    <div class="col-md-12 column">
+                        <div class="clients-carousel">
+                            <div class="client">
+                                <a title="" href="#"><img src="resources/assets/front/images/client1.jpg" alt="" /></a>
+                            </div><!-- Client -->
+                            <div class="client">
+                                <a title="" href="#"><img src="resources/assets/front/images/client2.jpg" alt="" /></a>
+                            </div><!-- Client -->
+                            <div class="client">
+                                <a title="" href="#"><img src="resources/assets/front/images/client3.jpg" alt="" /></a>
+                            </div><!-- Client -->
+                            <div class="client">
+                                <a title="" href="#"><img src="resources/assets/front/images/client4.jpg" alt="" /></a>
+                            </div><!-- Client -->
+                            <div class="client">
+                                <a title="" href="#"><img src="resources/assets/front/images/client5.jpg" alt="" /></a>
+                            </div><!-- Client -->
+                            <div class="client">
+                                <a title="" href="#"><img src="resources/assets/front/images/client1.jpg" alt="" /></a>
+                            </div><!-- Client -->
+                            <div class="client">
+                                <a title="" href="#"><img src="resources/assets/front/images/client2.jpg" alt="" /></a>
+                            </div><!-- Client -->
+                        </div><!-- Clients Carousel -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <footer>
+        <div class="block darkblue-layer">
+            <div data-velocity="-.1" style="background: url(resources/assets/front/images/parallax3.jpg) repeat scroll 50% 0 transparent;" class="parallax"></div>
+            <div class="container">
+                <div class="footer-widgets">
+                    <div class="row">
+                        <div class="col-md-3">
+                            <div class="widget">
+                                <div class="about-widget">
+                                     <div class="widget-title"><br>
+                                    <h4>LOCATION DISCRIPTION</h4>
+                                   
+                                </div>
+                                  
+                                    <ul>
+                                    <li style="color: white"> Steps away from DC,SP Bungalows, Bangladesh Bank, RDRS Office, CARE BD Office & Zero Point.</li>
+                                    <li style="color: white"> 1 km from Commercial Area & City Corporation Office.</li>
+                                    <li style="color: white"> 3 km from Parjotan Motel & Dhaka Bus Station.</li>
+                                    <li style="color: white"> 35 km from Saidpur Airport.</li>
+                                   
+                                </ul><!-- ul -->
+                                </div>
+                            </div><!-- Widget -->
+                        </div>
+                        <div class="col-md-3">
+                            <div class="widget">
+                                <div class="offers-widget">
+                                    <div class="fb-page" data-href="https://www.facebook.com/caspiathehome" data-tabs="timeline" data-width="600" data-height="320" data-small-header="false" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true"><blockquote cite="https://www.facebook.com/caspiathehome" class="fb-xfbml-parse-ignore"><a href="https://www.facebook.com/caspiathehome">Caspia - The Home</a></blockquote></div>
+                                </div><!-- Offers Widget -->
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="widget">
+                                <div class="offers-widget">
+                              <iframe src="https://www.google.com/maps/embed?pb=!4v1592078469313!6m8!1m7!1seT8Jxahf1mPNhisffR-_lQ!2m2!1d25.75701426032126!2d89.23947631041689!3f226.42191096133152!4f13.080438817888464!5f1.1924812503605782" width="600" height="320" frameborder="0" style="border:0" allowfullscreen></iframe>
+                                </div><!-- Offers Widget -->
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="widget">
+                                <div class="widget-title">
+                                    <h4>Luxury Offer</h4>
+                                    <span>Local Guide</span>
+                                </div>
+                                <ul>
+                                    <li><i class="fa fa-umbrella"></i> Boutiques</li>
+                                    <li><i class="fa fa-laptop"></i> Complimentary wireless internet</li>
+                                    <li><i class="fa fa-clock-o"></i> Private beach with service</li>
+                                    <li><i class="fa fa-wifi"></i> Pet-friendly resort</li>
+                                    <li><i class="fa fa-umbrella"></i> Tennis courts</li>
+                                </ul><!-- ul -->
+                            </div><!-- Luxury Offers -->
+                        </div>
+                    </div>
+                </div><!-- Footer Widgets -->
+            </div>
+        </div>
+    </footer><!-- footer -->
+
+    <div class="bottom-footer">
+        <div class="container">
+            <div class="contact-bar">
+                <div class="col-md-4">
+                    <div class="contact-details">
+                        <span><i class="fa fa-map-marker"></i></span>
+                        <strong>Address:</strong>
+                        <p>Rangpur, Opposite of Circuit House</p>
+                    </div><!-- contact-details -->
+                </div>
+                <div class="col-md-4">
+                    <div class="contact-details dark">
+                        <span><i class="fa fa-phone"></i></span>
+                        <strong>Call Us Now:</strong>
+                        <p>
+                            +88 01977227742
+                        </p>
+                    </div><!-- contact-details -->
+                </div>
+                <div class="col-md-4">
+                    <div class="contact-details">
+                        <span><i class="fa fa-envelope-square"></i></span>
+                        <strong>Email Address:</strong>
+                        <p>caspia.rest@gmail.com</p>
+                    </div><!-- contact-details -->
+                </div>
+            </div><!-- contact-data -->
+            <p>&copy; 2017 <a href="#">CASPIA</a> - All Rights Reserved - Made By <a href="http://zstechbd.com/">ZS technologies</a></p>
+        </div><!-- container -->
+    </div><!-- after-footer -->
+
+
+    <div class="booking-popup">
+        <div class="popup-container">
+            <div class="popup-inner">
+                <span class="close-btn"><img src="resources/assets/front/images/cross.png" alt="" /></span>
+                <div class="popup-title">
+                    <span>Any Time Worldwide</span>
+                    <h4>Book Your Room</h4>
+                    <span>Not valid for bookings less than 3 days </span>
+                </div><!-- Popup Title -->
+                <div class="popup-details">
+                    <div class="popup-block">
+                        <div class="row">
+                            <div class="col-md-5 column">
+                                <div class="popup-block-title">
+                                    <span>Any Time</span>
+                                    <h4>Choose Your Date</h4>
+                                </div>
+                            </div>
+                            <div class="col-md-7 column">
+                                <form>
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            <label>Check In</label>
+                                            <div class="field">
+                                                <input class="popupDatepicker" type="text" placeholder="">
+                                                <img class="field-icon" src="resources/assets/front/images/calendar.png" alt="" />
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <label>Check Out</label>
+                                            <div class="field">
+                                                <input class="popupDatepicker" type="text" placeholder="">
+                                                <img class="field-icon" src="resources/assets/front/images/calendar.png" alt="" />
+                                            </div>
+                                        </div>
+                                        <div class="col-md-4">
+                                            <label>Adults</label>
+                                            <div class="field">
+                                                <input class="inc-dec" value="00" type="text" placeholder="">
+                                            </div>
+                                        </div>
+                                        <div class="col-md-4">
+                                            <label>Kids</label>
+                                            <div class="field">
+                                                <input class="inc-dec" value="00" type="text" placeholder="">
+                                            </div>
+                                        </div>
+                                        <div class="col-md-4">
+                                            <label>Rooms</label>
+                                            <div class="field">
+                                                <input class="inc-dec" value="00" type="text" placeholder="">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </form><!-- Tab Form -->
+                            </div>
+                        </div>
+                    </div><!-- Popup Block -->
+                    <div class="popup-block">
+                        <div class="row">
+                            <div class="col-md-5 column">
+                                <div class="popup-block-title">
+                                    <span>Awesome Rooms</span>
+                                    <h4>Your Room Summary</h4>
+                                </div>
+                            </div>
+                            <div class="col-md-7">
+                                <div class="popup-rooms">
+                                    <div class="popup-room">
+                                        <div class="popup-room-img">
+                                            <img src="resources/assets/front/images/popup-room.jpg" alt="" />
+                                        </div>
+                                        <div class="popup-room-detail">
+                                            <i>Awesome Features Room</i>
+                                            <h5>Super Star Luxury Hotle</h5>
+                                            <div class="room-price-from">
+                                                <strong>Start From </strong>
+                                                <span>$289</span>
+                                                <strong>Per Person</strong>
+                                            </div>
+                                            <a class="book-now" href="#" title="">SEE DETAILS</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div><!-- Popup Block -->
+                    <div class="popup-block">
+                        <div class="row">
+                            <div class="col-md-5 column">
+                                <div class="popup-block-title">
+                                    <span>We Stand By</span>
+                                    <h4>Reservation Details</h4>
+                                </div>
+                            </div>
+                            <div class="col-md-7 column">
+                                <form>
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            <label>First Name</label>
+                                            <div class="field">
+                                                <input type="text" placeholder="" />
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <label>Last Name</label>
+                                            <div class="field">
+                                                <input type="text" placeholder="" />
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <label>Email</label>
+                                            <div class="field">
+                                                <input type="email" placeholder="" />
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <label>Phone</label>
+                                            <div class="field">
+                                                <input type="email" placeholder="" />
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <label>City</label>
+                                            <div class="field">
+                                                <input type="email" placeholder="" />
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <label>Address</label>
+                                            <div class="field">
+                                                <input type="email" placeholder="" />
+                                            </div>
+                                        </div>
+                                        <div class="col-md-12">
+                                            <label>Requirements</label>
+                                            <div class="field textarea">
+                                                <textarea></textarea>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-12">
+                                            <button class="book-now" type="submit">BOOK NOW</button>
+                                        </div>
+                                    </div>
+                                </form><!-- Tab Form -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div><!-- Booking Popup -->
+
+</div>
+
+<script src="resources/assets/front/js/jquery.min.js" type="text/javascript"></script>
+<script src="resources/assets/front/js/bootstrap.min.js" type="text/javascript"></script>
+<script src="resources/assets/front/js/owl.carousel.min.js" type="text/javascript"></script>
+<script src="resources/assets/front/js/jquery.poptrox.min.js" type="text/javascript"></script>
+<script src="resources/assets/front/js/enscroll-0.5.2.min.js" type="text/javascript"></script>
+<script src="resources/assets/front/js/jquery.scrolly.js" type="text/javascript"></script>
+<script src="resources/assets/front/js/jquery.isotope.min.js" type="text/javascript"></script>
+<script src="resources/assets/front/js/isotope-initialize.js" type="text/javascript"></script>
+<script src="resources/assets/front/js/bootstrap-datepicker.min.js" type="text/javascript"></script>
+<script src="resources/assets/front/js/userincr.js" type="text/javascript"></script>
+<script src="resources/assets/front/js/jquery.simpleWeather.min.js"></script>
+<script src="resources/assets/front/js/script.js" type="text/javascript"></script>
+<script type="text/javascript">
+
+    $(window).load(function(){
+
+        /*================== SERVICES CAROUSEL ======================*/
+        $('.service-carousel').owlCarousel({
+            autoplay:true,
+            autoplayTimeout:30000,
+            smartSpeed:2000,
+            loop:true,
+            dots:false,
+            nav:true,
+            margin:10,
+            items:3,
+            autoHeight:true,
+            responsive:{
+                0:{items:1},
+                480:{items:2},
+                767:{items:3},
+                980:{items:3}
+            }
+        });
+
+
+        /*================== CLIENTS CAROUSEL ======================*/
+        $('.clients-carousel').owlCarousel({
+            autoplay:true,
+            autoplayTimeout:30000,
+            smartSpeed:2000,
+            loop:true,
+            dots:false,
+            nav:true,
+            margin:10,
+            items:5,
+            autoHeight:true,
+            responsive:{
+                0:{items:1},
+                480:{items:3},
+                767:{items:4},
+                980:{items:5}
+            }
+        });
+    });
+
+</script>
+
+</body>
+
+<!-- Mirrored from caspiathehome.com/ by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 06 Aug 2020 12:30:16 GMT -->
+</html>

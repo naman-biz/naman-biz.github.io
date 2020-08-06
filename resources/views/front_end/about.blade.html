@@ -1,0 +1,109 @@
+<title>About CASPIA</title>
+@extends('front_end.layouts.main_front_layout')
+@section('content')
+
+
+
+
+    <div class="pagetop">
+        <div class="container">
+            <h1>About Us</h1>
+            <ul>
+                <li><a title="" href="#">Home</a></li>
+                <li>About Us</li>
+            </ul>
+        </div>
+    </div><!-- Page Top -->
+
+
+    <section>
+        <div class="block gray-layer">
+            <div class="parallax" data-velocity="-.1" style="background: rgba(0, 0, 0, 0) url({!! URL::asset('resources/assets/front/images/parallax1.html',is_secured()) !!}) no-repeat 50% 0;"></div>
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12 col-md-offset-1 column">
+                        <div>
+                            <strong style="color:#71A865">Welcome To</strong>
+                            <h1 class="h" style="margin-top:12px;font-size: 34px">CASPIA<span style="font-size: 15px" class="theHome"> &nbsp;The Home</span></h1>
+                            
+                           
+                                  <img  class="img-responsive" style="width:350px;" src="%7b%21%21%20URL__asset(%27resources/assets/front/images/caspiabulding.html">
+                              
+                                    <h6 style="color:#555555;font-family:domine;font-size:20px;font-weight:bold;letter-spacing:0.3px;line-height:50px;margin: 0 0 20px;">A Smart Boutique Hotel Fit For Foreigners & Corporate Guests</h6>
+                                    <h6>Cantt. Road (Infront o Circuit House), Rangpur.</h6>
+                                     <h6>Reservation Mobile No. : +88 01977-227742</h6>
+                                     <h6>Caspia Restaurant Mobile No. : +88 01977-227742</h6>
+                                     <h6>Telephone No. : +88 0521-61111</h6>
+                                      <h6>Fax No. : +88 0521-55300</h6>
+                                      <h6>E-mail : info@caspiathehome.com</h6>
+                                      <h6>Web. : www.caspiathehome.com</h6>
+
+                                   <br><br>
+                                   <h1>Our Service</h1>
+                                <div class="row">
+                                 <div class="col-md-9">
+                                    <ul>
+                                        @foreach($roomService as $s)
+                                        <li><i class="fa fa-unlink"></i> {!! $s->name !!}</li>
+                                        @endforeach
+                                    </ul>
+                                </div>
+                                </div>
+                          
+                        </div><!-- tabs-data -->
+
+                    </div>
+                </div>
+            </div><!-- container -->
+        </div><!-- block -->
+    </section><!-- Tabs Section -->
+
+
+
+
+
+
+@endsection
+
+@section('on_page_script')
+    <script type="text/javascript">
+        $(window).load(function(){
+            /*================== TESTIMONIAL CAROUSEL ======================*/
+            $('.testimonial-carousel').owlCarousel({
+                autoplay:true,
+                autoplayTimeout:3000,
+                smartSpeed:2000,
+                loop:true,
+                dots:false,
+                nav:false,
+                margin:10,
+                singleItem:true,
+                items:1,
+                animateIn:"fadeIn",
+                animateOut:"fadeOut"
+            });
+
+
+
+            /*================== CLIENTS CAROUSEL ======================*/
+            $('.clients-carousel').owlCarousel({
+                autoplay:true,
+                autoplayTimeout:30000,
+                smartSpeed:2000,
+                loop:true,
+                dots:false,
+                nav:true,
+                margin:10,
+                items:5,
+                autoHeight:true,
+                responsive:{
+                    0:{items:1},
+                    600:{items:2},
+                    1000:{items:3},
+                    1200:{items:5}
+                }
+            });
+
+        });
+    </script>
+@endsection

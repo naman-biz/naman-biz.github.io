@@ -1,0 +1,171 @@
+@extends('admin/layouts.admin_layout')
+
+@section('content')
+<div class="panel">
+    <div class="panel-heading">
+        <h3>Manage all product...</h3>
+        <a data-toggle="modal" data-target="#product_create_modal" href="#" class="btn btn-md btn-primary btn_hover"><span>Add Product</span></a>
+    </div>
+    <div class="panel-body">
+        @if(Session::has('message'))
+            <h4 class="alert alert-success">{!! Session::get('message') !!}</h4>
+        @endif
+        <table class="table table-bordered table-responsive">
+            <thead>
+                <tr>
+                    <td>SL</td>
+                    <td>Category</td>
+                    <td>Name</td>
+                    <td>Product Code</td>
+                    <td>Base Price</td>
+                    <td>Sell Price</td>
+                    <td>Quantity</td>
+                    <td>Action</td>
+                </tr>
+            </thead>
+            <tbody>
+                            @foreach($products as $p)
+                    <tr>
+                        <td>
+                            {!! $i !!}
+                            {!! Form::token() !!}
+                        </td>
+                        <td>{!! $p->category->name !!}</td>
+                        <td>{!! $p->name !!}</td>
+                        <td>{!! $p->product_code !!}</td>
+                        <td>{!! $p->base_price !!}</td>
+                        <td>{!! $p->sell_price !!}</td>
+                        <td>{!! $p->quantity !!}</td>
+                        <td>
+                            <a href="%7b%21%21%20URL__to(%27system/product%27%2c%24p-_id%2cis_secured())%20%21%21%7d.html" class="btn btn-danger btn-xs delete_with_swal"><i class="fa fa-remove"></i></a>
+                            <a href="#" class="btn btn-primary btn-xs" data-toggle="modal" data-target="#edit_{!! $p->id !!}"><i class="fa fa-edit"></i></a>
+                            <div aria-hidden="true" role="dialog" id="edit_{!! $p->id !!}" class="modal fade">
+                                <div class="modal-dialog">
+                                    <div class="modal-content" style="background:rgba(221,34,255,0.38)">
+                                        <div class="modal-header">
+                                            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                                            <h4 class="modal-title text-center">Edit product</h4>
+                                        </div>
+                                        <div class="modal-body nav_create_modal_body" style="padding:2% 5%">
+                                            {!! Form::model($p,['url'=>URL::to('system/product',$p->id,is_secured()),'method'=>'put','class'=>'form form-signin','style'=>'margin:0%;max-width: 100%;']) !!}
+                                            <div class="login-wrap">
+                                                <div class="form-group">
+                                                    {!! Form::label('Product Category') !!}
+                                                    <select name="category_id" class="form-control selectpicker" data-live-search="true">
+                                                        @foreach($category as $c)
+                                                            <option value="{!! $c->id !!}">{!! $c->name !!}</option>
+                                                        @endforeach
+                                                    </select>
+                                                </div>
+                                                <div class="form-group">
+                                                    {!! Form::label('Product Name') !!}
+                                                    {!! Form::text('name',null,['class'=>'form-control']) !!}
+                                                </div>
+                                                <div class="form-group">
+                                                    {!! Form::label('Product Code') !!}
+                                                    {!! Form::text('product_code',null,['class'=>'form-control']) !!}
+                                                </div>
+                                                <div class="form-group">
+                                                    {!! Form::label('Base Price') !!}
+                                                    {!! Form::text('base_price',null,['class'=>'form-control']) !!}
+                                                </div>
+                                                <div class="form-group">
+                                                    {!! Form::label('Sell Price') !!}
+                                                    {!! Form::text('sell_price',null,['class'=>'form-control']) !!}
+                                                </div>
+                                                <div class="form-group">
+                                                    {!! Form::label('Quantity') !!}
+                                                    {!! Form::text('quantity',null,['class'=>'form-control']) !!}
+                                                </div>
+                                                <div class="form-group">
+                                                    {!! Form::submit('SAVE',['class'=>'btn btn-block btn-primary']) !!}
+                                                </div>
+                                            </div>
+                                            {!! Form::close() !!}
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+                                    @endforeach
+            </tbody>
+        </table>
+
+    </div>
+</div>
+
+<!-- ============ MODAL WINDOW FOR USER CREATING ============ -->
+<div aria-hidden="true" role="dialog" id="product_create_modal" class="modal fade">
+    <div class="modal-dialog" style="width:90%">
+        <div class="modal-content" style="background:rgba(221,34,255,0.38)">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                <h4 class="modal-title text-center">Add new product</h4>
+            </div>
+            <div class="modal-body nav_create_modal_body" style="padding:2% 5%">
+                {!! Form::open(['url'=>URL::to('system/product','',is_secured()),'class'=>'form form-signin','style'=>'margin:0%;max-width: 100%;']) !!}
+                    <div class="login-wrap">
+                        <div class="form-inline">
+                            <div class="form-group">
+                                {!! Form::label('Order No') !!}
+                                {!! Form::text('order_no',null,['class'=>'form-control']) !!}
+                            </div>
+                            <div class="form-group">
+                                {!! Form::label('Category') !!}
+                                <select name="category_id" class="form-control selectpicker" data-live-search="true" data-width="200px">
+                                    @foreach($category as $c)
+                                        <option value="{!! $c->id !!}">{!! $c->name !!}</option>
+                                    @endforeach
+                                </select>
+                            </div>
+                        </div>
+                        <table class="table table-bordered">
+                            <thead>
+                            <tr>
+                                <td>Name</td>
+                                <td>Code</td>
+                                <td>Base Price</td>
+                                <td>Sell Price</td>
+                                <td>Quantity</td>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr>
+                                <td>
+                                    {!! Form::text('name',null,['class'=>'form-control']) !!}
+                                </td>
+                                <td>
+                                    {!! Form::text('product_code',null,['class'=>'form-control']) !!}
+                                </td>
+                                <td>
+                                    {!! Form::text('base_price',null,['class'=>'form-control']) !!}
+                                </td>
+                                <td>
+                                    {!! Form::text('sell_price',null,['class'=>'form-control']) !!}
+                                </td>
+                                <td>
+                                    {!! Form::text('quantity',null,['class'=>'form-control']) !!}
+                                </td>
+                            </tr>
+                            </tbody>
+                        </table>
+                        <div class="form-group">
+                            {!! Form::submit('SAVE',['class'=>'btn btn-block btn-primary']) !!}
+                        </div>
+                    </div>
+                {!! Form::close() !!}
+            </div>
+        </div>
+    </div>
+</div>
+
+
+@endsection
+@section('custom_script')
+    <script type="text/javascript">
+        $(document).ready(function () {
+
+        })
+    </script>
+@endsection

@@ -1,0 +1,36 @@
+<title>Booking Now</title>
+@extends('front_end.layouts.main_front_layout')
+@section('content')
+
+    <div class="pagetop">
+        <div class="container">
+            <h1>BOOKING</h1>
+            <ul>
+                <li><a title="" href="%7b%21%21%20URL__to(%27/%27%2c%27%27%2cis_secured())%20%21%21%7d.html">Home</a></li>
+                <li>Booking</li>
+            </ul>
+        </div>
+    </div><!-- Page Top -->
+
+<br><br><br>&nbsp;
+
+   <div class="container">
+  <div class="row">
+   
+    <div class="col-sm-4 col-sm-offset-5 col-xs-offset-4"> 
+
+    &nbsp;&nbsp;&nbsp;<img style="width: 50px; text-align: center;" src="%7b%21%21%20URL__asset(%27resources/assets/front/images/arr.html">
+
+    </div>
+    
+  </div>
+ 
+   @foreach($book_list as $booking)
+    <a class="btn btn-primary btn-block" style="font-size: 16px" href="%7b%21%21%20URL__to(%27booking/%27.html">{!! $booking->book_type !!} <i class="glyphicon glyphicon-menu-right"></i></a>
+    @endforeach
+</div>
+<br>
+@endsection
+
+@section('on_page_script')
+@endsection

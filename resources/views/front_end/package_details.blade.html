@@ -1,0 +1,172 @@
+<title>Details for {!! $room->title !!}</title>
+@extends('front_end.layouts.main_front_layout3')
+@section('content')
+    <div class="pagetop">
+        <div class="container">
+            <h1>Package Detail</h1>
+            <ul>
+                <li><a title="" href="%7b%21%21%20URL__to(%27/%27%2c%27%27%2cis_secured())%20%21%21%7d.html">Home</a></li>
+                <li>Book Now</li>
+                <li>Book Details</li>
+            </ul>
+        </div>
+    </div><!-- Page Top -->
+    <section>
+        <div class="block remove-gap gray">
+            <div class="container">
+            <div class="row">
+            <div class="col-md-4">
+                            <h3 class="package-name">{!! $room->title !!}</h3>
+                            <ul class="features-list">
+                                <li><strong>Beds/Others :</strong> {!! $room->bed_type !!}</li>
+                                <li><strong>Size/Others :</strong> {!! $room->size !!}</li>
+                                <li><strong>2017 rates :</strong> {!! $room->price !!} TK (excluding peak season)</li>
+                            </ul>
+                            
+            </div>
+            </div>
+                <div class="row">
+
+                    <div class="col-md-12">
+
+                        <div class="package-single-detail">
+                            <span>Complimentry Services & Amenities</span>
+                            <h3 class="package-name">Booking Description</h3>
+                            <div class="package-price">
+                                <strong>Start From</strong>
+                                <i>{!! $room->price !!} TK</i>
+                                <span>Per Person</span>
+                                <a class="book-now" href="%7b%21%21%20URL__to(%27booking_form%27%2c%24room-_id%2cis_secured())%20%21%21%7d.html" title="">Book Now</a>
+                            </div><!-- Package price -->
+                            <p style="text-align:justify;">{!! $room->description !!}</p>
+                            <div class="room-services">
+                                <div class="col-md-3">
+                                    <div class="about-service">
+                                        <span>OUR SERVICES</span>
+                                        <h5>{!! $room->title !!} Facilities</h5>
+                                        <p>Folloing is the list of our other service that include to this room </p>
+                                    </div><!-- About Service -->
+                                </div>
+                               <div class="col-md-9">
+                                    <ul>
+                                        @foreach($roomService as $s)
+                                        <li><i class="fa fa-unlink"></i>{!! $s->name !!}</li>
+                                        @endforeach
+                                    </ul>
+                                </div>
+                            </div><!-- Room Services -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <section>
+        <div class="block remove-gap gray">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <h2 class="side-title">PEOPLE <span>REVIEWS</span></h2>
+                        <div class="comments-thread">
+                            <ul>
+                                <li>
+                                    <div class="comment">
+                                        <img src="http://placehold.it/107x107" alt="" />
+                                        <a class="reply" href="#" title="">Reply</a>
+                                        <div class="comment-detail">
+                                            <div class="comment-info">
+                                                <h6>MARGARETTE <i>Says:</i></h6>
+                                                <span>November 17, 2014</span>
+                                                <span>at 9:55 am</span>
+                                            </div>
+                                            <div class="comment-rating">
+                                                <span>Quality</span>
+                                                <div class="stars">
+                                                    <i class="fa fa-star"></i>
+                                                    <i class="fa fa-star"></i>
+                                                    <i class="fa fa-star"></i>
+                                                    <i class="fa fa-star"></i>
+                                                    <i class="fa fa-star-o"></i>
+                                                </div>
+                                            </div>
+                                            <p>Curabitur blandit tempus porttitor. Maecenas sediam egetrius blandit sit accumsan urna molestie interdum.</p>
+                                        </div>
+                                    </div><!-- Comment -->
+                                </li>
+                                <li>
+                                    <div class="comment">
+                                        <img src="http://placehold.it/107x107" alt="" />
+                                        <a class="reply" href="#" title="">Reply</a>
+                                        <div class="comment-detail">
+                                            <div class="comment-info">
+                                                <h6>MARGARETTE <i>Says:</i></h6>
+                                                <span>November 17, 2014</span>
+                                                <span>at 9:55 am</span>
+                                            </div>
+                                            <div class="comment-rating">
+                                                <span>Quality</span>
+                                                <div class="stars">
+                                                    <i class="fa fa-star"></i>
+                                                    <i class="fa fa-star"></i>
+                                                    <i class="fa fa-star"></i>
+                                                    <i class="fa fa-star"></i>
+                                                    <i class="fa fa-star-o"></i>
+                                                </div>
+                                            </div>
+                                            <p>Curabitur blandit tempus porttitor. Maecenas sediam egetrius blandit sit accumsan urna molestie interdum.</p>
+                                        </div>
+                                    </div><!-- Comment -->
+                                    <ul>
+                                        <li>
+                                            <div class="comment">
+                                                <img src="http://placehold.it/107x107" alt="" />
+                                                <a class="reply" href="#" title="">Reply</a>
+                                                <div class="comment-detail">
+                                                    <div class="comment-info">
+                                                        <h6>MARGARETTE <i>Says:</i></h6>
+                                                        <span>November 17, 2014</span>
+                                                        <span>at 9:55 am</span>
+                                                    </div>
+                                                    <div class="comment-rating">
+                                                        <span>Quality</span>
+                                                        <div class="stars">
+                                                            <i class="fa fa-star"></i>
+                                                            <i class="fa fa-star"></i>
+                                                            <i class="fa fa-star"></i>
+                                                            <i class="fa fa-star"></i>
+                                                            <i class="fa fa-star-o"></i>
+                                                        </div>
+                                                    </div>
+                                                    <p>Curabitur blandit tempus porttitor. Maecenas sediam egetrius blandit sit accumsan urna molestie interdum.</p>
+                                                </div>
+                                            </div><!-- Comment -->
+                                        </li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </div><!-- Comments Thread -->
+                        <div class="block-gap"></div>
+                        <div class="comment-form">
+                            <h2 class="side-title">LEAVE <span>A REPLY</span></h2>
+                            <div class="input-fields">
+                                <div class="row">
+                                    <div class="col-md-4"><input type="text" placeholder="Complete Name *" /></div>
+                                    <div class="col-md-4"><input type="email" placeholder="Email Address *" /></div>
+                                    <div class="col-md-4"><input type="text" placeholder="Website" /></div>
+                                    <div class="col-md-12"><textarea placeholder="Enter Your Message"></textarea></div>
+                                    <div class="col-md-12"><button class="book-now" type="submit">Submit Now</button></div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+@endsection
+
+@section('on_page_script')
+@endsection

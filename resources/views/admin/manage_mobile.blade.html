@@ -1,0 +1,52 @@
+@extends('admin/layouts.admin_layout')
+
+@section('content')
+<div class="panel">
+    <div class="panel-heading">
+        <h3>Manage all mobile...</h3>
+        <a href="%7b%21%21%20URL__to(%27system/mobile/create%27%2c%27%27%2cis_secured())%20%21%21%7d.html" class="btn btn-md btn-primary">Mobile Add To Shop</a>
+    </div>
+    <div class="panel-body">
+        <table class="table table-bordered table-responsive">
+            <thead>
+                <tr>
+                    <td>SL</td>
+                    <td>Brand</td>
+                    <td>Name</td>
+                    <td>Price</td>
+                    <td>Photo</td>
+                    <td>Action</td>
+                </tr>
+            </thead>
+            <tbody>
+                                @foreach($mobiles as $m)
+                    <tr>
+                        <td>
+                            {!! $i !!}
+                            {!! Form::token() !!}
+                        </td>
+                        <td>{!! $m->brand->name !!}</td>
+                        <td>{!! $m->name !!}</td>
+                        <td>{!! $m->price !!}</td>
+                        <td>
+                            <img src="%7b%21%21%20URL__asset(%27resources/uploads/%27-3.html" style="height:60px;width:60px" alt="Mobile Images" class="mobile-responsive">
+                        </td>
+                        <td>
+                            <a href="%7b%21%21%20URL__to(%27system/mobile%27%2c%24m-_id%2cis_secured())%20%21%21%7d.html" class="btn btn-xs btn-danger delete_with_swal"><i class="fa fa-remove"></i></a>
+                            <a href="%7b%21%21%20URL__to(%27system/mobile/%27.html" class="btn btn-xs btn-success"><i class="fa fa-edit"></i></a>
+                        </td>
+                    </tr>
+                                    @endforeach
+            </tbody>
+        </table>
+        {!! $mobiles->links() !!}
+    </div>
+</div>
+@endsection
+@section('custom_script')
+    <script type="text/javascript">
+        $(document).ready(function () {
+
+        })
+    </script>
+@endsection

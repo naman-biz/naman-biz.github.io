@@ -1,0 +1,32 @@
+@extends('admin/layouts.admin_layout')
+
+@section('content')
+<div class="panel">
+    <div class="panel-heading">
+        <h3>Manage all Current Booking...</h3>
+    </div>
+    <div class="panel-body">
+        @if(Session::has('message'))
+            <h4 class="alert alert-success" style="color:red;">{!! Session::get('message') !!}</h4>
+        @endif
+        <table class="table table-bordered table-responsive">
+            <thead>
+                <tr>
+                    <td>SL</td>
+                    <td>Room Title</td>
+                    <td>Room Name</td>
+                    <td>Customer Name</td>
+                    <td>Mobile</td>
+                    <td>E-mail</td>
+                    <td>Nationality</td>
+                    <td>Check In</td>
+                    <td>Check Out</td>
+                    <td>Action</td>
+                </tr>
+            </thead>
+            <tbody>
+                                @foreach($bookingInfos as $bookingInfo)
+                    <tr>
+                        <td>{!! $i !!}</td>
+                        <td>
+                        

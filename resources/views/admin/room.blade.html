@@ -1,0 +1,61 @@
+@extends('admin/layouts.admin_layout')
+
+@section('content')
+<div class="panel">
+    <div class="panel-heading">
+        <h3>Manage all Booking...</h3>
+        <a href="%7b%21%21%20URL__to(%27system/booking/create%27%2c%27%27%2cis_secured())%20%21%21%7d.html" class="btn btn-md btn-primary btn_hover"><span>Create New Booking</span></a>
+    </div>
+    <div class="panel-body">
+        @if(Session::has('message'))
+            <h4 class="alert alert-success">{!! Session::get('message') !!}</h4>
+        @endif
+        <table class="table table-bordered table-responsive">
+            <thead>
+                <tr>
+                    <td>SL</td>
+                    <td>Title</td>
+                    <td>Booking Type</td>
+                    <td>Price</td>
+                    <td>Bed Type/Others</td>
+                    <td>Size/Others</td>
+                    <td>Featured Image</td>
+                    <td>Action</td>
+                </tr>
+            </thead>
+            <tbody>
+                                @foreach($rooms as $room)
+                    <tr>
+                        <td>{!! $i !!}</td>
+                        <td>{!! $room->title !!}</td>
+                        <td>{!! $room->room_type_id !!}</td>
+                        <td>{!! $room->price !!}</td>
+                        <td>{!! $room->bed_type !!}</td>
+                        <td>{!! $room->size !!}</td>
+                        <td>
+                            <img src="%7b%21%21%20URL__asset(%27resources/uploads/%27.html"
+                                 alt="Room Image" style="width:100px;height:80px;">
+                        </td>
+                        <td>
+                            
+                            <a href="%7b%21%21%20URL__to(%27booking/delete%27%2c%24room-_id%2cis_secured())%20%21%21%7d.html" class="btn btn-danger"  onclick="return confirm('Are you sure you want to delete?');"><i class="fa fa-remove"></i></a>
+                        </td>
+                    </tr>
+                                    @endforeach
+            </tbody>
+        </table>
+
+    </div>
+</div>
+
+
+
+
+@endsection
+@section('custom_script')
+    <script type="text/javascript">
+        $(document).ready(function () {
+
+        })
+    </script>
+@endsection
